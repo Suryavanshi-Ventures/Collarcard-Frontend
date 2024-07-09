@@ -1,0 +1,234 @@
+/* 
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.patent-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 120px;
+}
+
+
+
+.h1-patent {
+  color: #0066ff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-top: -25px;
+  font-size: 50px;
+}
+.patent-container h2 {
+  color: rgba(0, 0, 0, 0.1);
+  font-family: "Open Sans", Sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+.h1-trademark {
+  color: black;
+  font-weight: bold;
+  font-size: 23px;
+  text-align: start;
+  margin-top: 20px;
+} */
+
+/* .patent-card-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+gap: 20px;
+
+ 
+}
+.patent-left-card{
+   
+  }
+
+  .patent-right-card{
+
+  } */
+
+/* .patent-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+.patent-left-card,
+.patent-right-card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 45%;
+}
+
+.patent-right-card li {
+  display: flex;
+  align-items: center;
+  margin-top: 10px; 
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.patent-left-card p {
+  font-size: 18px;
+}
+.patent-right-card p {
+  font-size: 18px;
+  font-weight: 300;
+}
+.trademark-container{
+  display: flex;
+  justify-content: space-around;
+  
+  
+ 
+}
+
+.trademark-right-card p{
+  color: black;
+  font-weight: bold;
+ 
+  
+  
+}.trademark-left-card p{
+  color: black;
+ margin: 0 auto;
+ text-align: start;
+ margin-top: 10px;
+ margin-right: 380px;
+ font-size: 17px;
+  
+} */
+
+
+
+
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.patent-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 120px;
+}
+
+.h1-patent {
+  color: #0066ff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-top: -25px;
+  font-size: 50px;
+}
+
+.patent-container h2 {
+  color: rgba(0, 0, 0, 0.1);
+  font-family: "Open Sans", Sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+
+.h1-trademark {
+  color: black;
+  font-weight: bold;
+  font-size: 23px;
+  text-align: start;
+  margin-top: 20px;
+}
+
+.patent-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+.patent-left-card,
+.patent-right-card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 45%;
+}
+
+.patent-right-card li {
+  display: flex;
+  align-items: center;
+  margin-top: 10px; 
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.patent-left-card p {
+  font-size: 18px;
+
+}
+
+.patent-right-card p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.trademark-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.trademark-left-card p {
+  color: black;
+  font-size: 17px;
+  text-align: start;
+  margin: 10px auto 10px 0;
+}
+
+.trademark-right-card p {
+  color: black;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .patent-left-card,
+  .patent-right-card {
+    max-width: 100%;
+  }
+
+  .trademark-left-card p {
+    text-align: center;
+    margin-right: 0;
+  }
+  
+  .trademark-right-card p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .h1-patent {
+    font-size: 36px;
+  }
+
+  .h1-trademark {
+    font-size: 18px;
+  }
+
+  .patent-container h2 {
+    font-size: 30px;
+  }
+
+  .patent-left-card p,
+  .patent-right-card p {
+    font-size: 16px;
+  }
+}
