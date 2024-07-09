@@ -31,7 +31,7 @@ function Navbar() {
           </button>
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-              <li>
+              <li className='border-b-[3px] border-[#0066FF] py-2  cursor-pointer'>
                 <Link
                   to="home"
                   smooth={true}
@@ -42,7 +42,7 @@ function Navbar() {
                   HOME
                 </Link>
               </li>
-              <li>
+              <li className='border-b-[3px] border-transparent hover:border-[#0066FF] py-2  cursor-pointer '>
                 <Link
                   to="about"
                   smooth={true}
@@ -52,7 +52,7 @@ function Navbar() {
                   ABOUT US
                 </Link>
               </li>
-              <li>
+              <li className='border-b-[3px] border-transparent hover:border-[#0066FF] py-2   cursor-pointer'>
                 <Link
                   to="clients"
                   smooth={true}
@@ -62,7 +62,7 @@ function Navbar() {
                   CLIENTS
                 </Link>
               </li>
-              <li>
+              <li className='border-b-[3px] border-transparent hover:border-[#0066FF] py-2   cursor-pointer'>
                 <Link
                   to="patents"
                   smooth={true}
@@ -72,7 +72,7 @@ function Navbar() {
                   PATENTS
                 </Link>
               </li>
-              <li>
+              <li className='border-b-[3px] border-transparent hover:border-[#0066FF] py-2   cursor-pointer'>
                 <Link
                   to="faq"
                   smooth={true}
@@ -82,7 +82,7 @@ function Navbar() {
                   FAQ
                 </Link>
               </li>
-              <li>
+              <li className='border-b-[3px] border-transparent hover:border-[#0066FF] py-2   cursor-pointer'>
                 <Link
                   to="contact"
                   smooth={true}

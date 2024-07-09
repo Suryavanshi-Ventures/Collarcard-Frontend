@@ -10,6 +10,7 @@ import Contact from "./Sections/Contact";
 import Footer from "./component/Footer";
 import Testimonial from "./Sections/Testimonial";
 import CollarCard from "./Sections/CollarCard";
+import UsesRate from "./component/UsesRate";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         </Routes>
 
         <About/>
+        <UsesRate/>
         <Patent/>
         <FAQComponent/>
         <Client/>

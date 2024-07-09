@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./FAQComponent.css";
-
+import { motion } from "framer-motion";
 const FAQComponent = () => {
   const [expandedQuestions, setExpandedQuestions] = useState({});
 
@@ -129,16 +129,31 @@ const FAQComponent = () => {
   const renderQuestions = (questions, columnIndex) =>
     questions.map((item, index) => {
       const isExpanded = expandedQuestions[`${columnIndex}-${index}`];
+  
+      const variants = {
+        open: { height: "auto", opacity: 1 },
+        closed: { height: 0, opacity: 0 }
+      };
+  
       return (
-        <div
-          key={index}
-          className="faq-item"
-          onClick={() => toggleQuestion(`${columnIndex}-${index}`)}
-        >
-          <p>
-            {item.question} <span>{isExpanded ? "-" : "+"}</span>
-          </p>
-          {isExpanded && <p className="faq-answer">{item.answer}</p>}
+        <div key={index} className="faq-item">
+          <div
+            className="question"
+            onClick={() => toggleQuestion(`${columnIndex}-${index}`)}
+          >
+            <p className="">
+              {item.question} <span className="text-[30px] h-full">{isExpanded ? <img className="w-[15px] h-[15px]" src="https://cdn-icons-png.flaticon.com/512/43/43625.png"/> : <img className="w-[15px] h-[15px]" src="https://cdn-icons-png.flaticon.com/512/748/748113.png"/>}</span>
+            </p>
+          </div>
+          <motion.div
+            className={isExpanded ? "faq-answer" : ""}
+            variants={variants}
+            initial="closed"
+            animate={isExpanded ? "open" : "closed"}
+            transition={{ duration: 0.3 }}
+          >
+            <p>{item.answer}</p>
+          </motion.div>
         </div>
       );
     });

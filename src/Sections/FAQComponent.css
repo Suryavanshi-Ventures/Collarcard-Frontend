@@ -71,3 +71,7 @@
     flex: 1 1 100%;
   }
 }
+
+.slow-open {
+  transition: height 0.5s ease;
+}

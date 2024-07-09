@@ -29,9 +29,14 @@ import malofus from "../assets/maloufs-1.jpg";
 import archerCapital from "../assets/Archer-Capital.jpg";
 import perry from "../assets/perry-ellis.jpg";
 import dependableCleaner from "../assets/Dependable-Cleaners-1.jpg";
+import { motion, AnimatePresence } from 'framer-motion';
+import SectionTracker from "../component/sectionTracker/SectionTracker";
 
 function Client() {
   const [selectedCategory, setSelectedCategory] = useState("ALL");
+  const [isSection01InView, setIsSection01InView] = useState(false);
+  const [isSectionInView, setIsSectionInView] = useState(false);
+
 
   const clients = [
     { src: meridian, category: "Business" },
@@ -65,14 +70,46 @@ function Client() {
     { src: dependableCleaner, category: "Dry Cleaners" },
   ];
 
-function handleCategoryChange(category){
-  setSelectedCategory(category)
-}
+  function handleCategoryChange(category) {
+    setSelectedCategory(category)
+  }
 
   const filteredClients =
     selectedCategory === "ALL"
       ? clients
       : clients.filter((client) => client.category === selectedCategory);
+
+
+  const getRandomDirection = (category) => {
+    if (category === "Dry Cleaners" || category === "Fashion") {
+      return { z: -100, y: 100 }; // Come from back side and bottom
+    } else if (category === "Business" || category === "ALL") {
+      const directions = [
+        { x: 100, y: 0 },  // from right
+        { x: -100, y: 0 }, // from left
+        { x: 0, y: 100 },  // from bottom
+        { x: 0, y: -100 }  // from top
+      ];
+      return directions[Math.floor(Math.random() * directions.length)];
+    } else if (category === "Hotel") {
+      return { x: -100, y: 0 }; // Come from left side
+    }
+    // Default direction if category doesn't match
+    return { x: 0, y: 0 };
+  };
+
+
+  const handleInViewChange = (sectionId, inView) => {
+    if (sectionId === "client") {
+      setIsSection01InView(inView);
+    }
+  };
+
+  const handleInViewChange1 = (sectionId, inView) => {
+    if (sectionId === "client1") {
+      setIsSectionInView(inView);
+    }
+  };
 
   return (
     <div id="clients">
@@ -97,10 +134,76 @@ function handleCategoryChange(category){
           </li>
         </ul>
       </div>
-      <div className="client-img-container mt-10">
-        {filteredClients.map((client, index) => (
-          <img key={index} src={client.src} alt="" />
-        ))}
+      <div className="client-img-container mt-10 overflow-hidden">
+      <SectionTracker
+            sectionId="client1"
+            onInViewChange={handleInViewChange1}
+          />
+        <AnimatePresence>
+          {filteredClients.slice(0, 12).map((client, index) => {
+            const direction = getRandomDirection(selectedCategory);
+            return (
+              <motion.div
+              initial={{ scale: 0 }}
+              animate={isSectionInView && { scale: 1 }}
+              transition={isSectionInView && { duration: 0.5, ease: "easeInOut" }}
+            >
+              <motion.img
+                key={client.src}
+                src={client.src}
+                alt=""
+
+                initial={{ opacity: 0, ...direction }}
+                animate={{ opacity: 1, x: 0, y: 0 }}
+                exit={{ opacity: 0, ...direction }}
+                transition={{ duration: 0.5 }}
+              />
+              </motion.div>
+            );
+          })}
+          <SectionTracker
+            sectionId="client"
+            onInViewChange={handleInViewChange}
+          />
+          {filteredClients.slice(13, filteredClients.length).map((client, index) => {
+            const direction = getRandomDirection(selectedCategory);
+            const shouldAnimateFromBottom = isSection01InView === true; // Replace with your actual condition
+
+            const initialAnimation = {
+              opacity: 0,
+              ...direction,
+              ...(shouldAnimateFromBottom ? { y: 100 } : {}), // Initial position off-screen bottom if condition is true
+            };
+
+            const animateAnimation = {
+              opacity: 1,
+              x: 0,
+              y: 0,
+            };
+
+            const exitAnimation = {
+              opacity: 0,
+              ...direction,
+            };
+            return (
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={isSection01InView && { scale: 1 }}
+                transition={isSection01InView && { duration: 1, ease: "easeInOut" }}
+              >
+                <motion.img
+                  key={client.src}
+                  src={client.src}
+                  alt=""
+                  initial={initialAnimation}
+                  animate={animateAnimation}
+                  exit={exitAnimation}
+                  transition={{ duration: 0.5 }}
+                />
+              </motion.div>
+            );
+          })}
+        </AnimatePresence>
       </div>
     </div>
   );
