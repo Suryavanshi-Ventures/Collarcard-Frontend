@@ -10,13 +10,13 @@ function About() {
     < >
     <div id="about">
       <div className="about-container">
-        <div className="head">
-          <h2>Know who we are</h2>
-          <h1>CollarCard</h1>
+        <div className="">
+          <h2 className="head">Know who we are</h2>
+          <h1 className="head-h1">CollarCard</h1>
         </div>
 
         <div className="para-about">
-          <p>
+          <p className>
             A CollarCard is a credit card sized plastic card that contains four
             high quality pop-out collar stays that is <br /> stored in a man’s
             wallet. We invented CollarCards to address and fix the common
@@ -87,24 +87,24 @@ function About() {
       </div>
 
       <div className="ordering">
-        <div className="head">
-          <h2>Know how to order</h2>
-          <h1>Ordering is Simple</h1>
+        <div className="">
+          <h2 className="order-h2">Know how to order</h2>
+          <h1 className="order-h1">Ordering is Simple</h1>
         </div>
 
         <div className="ordering-card-container">
           <div className="ordering-card">
             <img src={artwork} alt="" />
             <p>
-              Send us your high-resolution artwork for the front of your
-              CollarCard and the text you would like printed on the back of each
-              collar stay on your CollarCard (email, website, and/or phone
+              Send us your high-resolution <br /> artwork for the front of your <br />
+              CollarCard and the text you <br /> would like printed on the back <br /> of each
+              collar stay on your <br /> CollarCard (email, website, <br /> and/or phone
               number.)
             </p>
           </div>
 
           <div className="ordering-card">
-            <img src={card} alt="" />
+            <img src={email} alt="" />
             <p>
               We will promptly create proofs <br /> and email them to you for
               your <br /> approval.
@@ -112,7 +112,7 @@ function About() {
           </div>
 
           <div className="ordering-card">
-            <img src={email} alt="" />
+            <img src={card} alt="" />
             <p>
               Once you approve and send <br /> payment, we will start to <br /> produce your
               order. Our typical <br /> turnaround time is very fast– <br /> usually only two

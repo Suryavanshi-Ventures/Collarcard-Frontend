@@ -16,8 +16,8 @@ function Section1() {
         <Video />
 
         <div className="card">
-          <h2 className="h2-collar text-7xl">collarcard</h2>
-          <h1>CollarCard</h1>
+          <h2 className="h2-collar text-[69px] -mb-[55px]">collarcard</h2>
+          <h1 className=" ">CollarCard</h1>
           <p>
             A CollarCard is a credit card sized plastic card
             <br />
@@ -25,7 +25,9 @@ function Section1() {
             <br />
             that is stored in a man’s wallet.
           </p>
-          <button className="btn">Request A Quote</button>
+         <div className="btn">
+         <button className="px-2 py-1 text-lg">Request A Quote</button>
+         </div>
         </div>
 
         <div className="arrow" onClick={scrollToAbout}>
