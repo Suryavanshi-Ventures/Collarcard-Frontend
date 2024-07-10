@@ -4,11 +4,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Testimonial.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectCreative, Navigation, Pagination  } from "swiper/modules";
+import { Autoplay, EffectCreative, Navigation, Pagination } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-creative";
+import"swiper/css/pagination"
 
 const settings = {
   dots: true,
@@ -44,16 +45,29 @@ const testimonials = [
 function Testimonial() {
   return (
     <>
-      <div className="testimonials">
-        <h2>What Client Say</h2>
-        <h1>Testimonials</h1>
-      </div>
 
-      <div className="testimonial-container">
-        <div className="slider-container">
-          <Slider testimonials={testimonials}/>
+      {/*  */}
+      <div className="App mt-10 h-[846.5px] overflow-hidden">
+        <div className="relative h-full  w-full">
+          <div className="absolute w-[104%] h-[80%] bg-gray-100 transform -rotate-2  bottom-[50px] -left-2 flex justify-center items-center">
+            <div className='about-container w-full h-[80%] rotate-[1.5deg]'>
+              <div className=' h-[90%]'>
+                <div className="testimonials">
+                  <h2>What Client Say</h2>
+                  <h1>Testimonials</h1>
+                </div>
+                <Slider testimonials={testimonials} />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      {/*  */}
+      {/* <div className="testimonial-container">
+        <div className="slider-container">
+          <Slider testimonials={testimonials} />
+        </div>
+      </div> */}
     </>
   );
 }
@@ -63,7 +77,7 @@ export default Testimonial;
 
 const Slider = ({ testimonials }) => {
   return (
-    <div className="relative w-full h-[368.5px] opacity-90 overflow-hidden">
+    <div className="relative w-full h-[408.5px] opacity-90 overflow-hidden">
       <Swiper
         grabCursor={true}
         effect={"creative"}
@@ -78,7 +92,7 @@ const Slider = ({ testimonials }) => {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        modules={[ Navigation, Pagination]}
+        modules={[Navigation, Pagination]}
         speed={1300}
         pagination={{ clickable: true }}
         creativeEffect={{
@@ -95,8 +109,8 @@ const Slider = ({ testimonials }) => {
           prevEl: '.swiper-button-prev',
         }}
       >
-        {testimonials.map((data, index) => (
-          <SwiperSlide className="testimonial-item" key={index}>
+        {testimonials?.map((data, index) => (
+          <SwiperSlide className="testimonial-item h-[85%]" key={index}>
             <div className="testimonial-text-container">
               <p>{data.text}</p>
             </div>
@@ -114,7 +128,7 @@ const Slider = ({ testimonials }) => {
 
       {/* Custom Navigation Buttons */}
       <div className="swiper-button-prev  text-gray-800 p-2 rounded-full absolute left-2 top-1/2 transform -translate-y-1/2 cursor-pointer z-10">
-      <img className="w-[20px] h-[20px]" src="https://cdn-icons-png.flaticon.com/512/130/130882.png" alt="" />
+        <img className="w-[20px] h-[20px]" src="https://cdn-icons-png.flaticon.com/512/130/130882.png" alt="" />
       </div>
       <div className="swiper-button-next  text-gray-800 p-2 rounded-full absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer z-10">
         <img className="w-[20px] h-[20px]" src="https://cdn-icons-png.flaticon.com/512/130/130884.png" alt="" />

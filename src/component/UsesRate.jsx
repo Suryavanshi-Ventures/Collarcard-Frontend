@@ -24,12 +24,12 @@ const UsesRate = () => {
             />
             <div className="relative h-full  w-full">
                 <div className="absolute w-[104%] h-[80%] bg-gray-100 transform -rotate-2  bottom-[50px] -left-2 flex justify-center items-center">
-                    <div className='about-container w-full h-[80%] rotate-1'>
+                    <div className='about-container w-full h-[80%] rotate-[1.5deg]'>
                         <div className=' h-[90%] flex justify-between'>
                             <div className='w-[50%]'>
                                 <CompairImage />
                             </div>
-                            <div className='w-[50%] mt-3'>
+                            <div className='w-[45%] mt-3'>
                                 <div className='mb-10'>
                                     <h2 className='text-[#00000014] text-[58px] mb-[-45px] font-[500]'>Compare</h2>
                                     <h2 className='text-[#0066FF] text-[35px] font-[500]'>Usage Rates</h2>
