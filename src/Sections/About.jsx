@@ -11,12 +11,12 @@ function About() {
     <div id="about">
       <div className="about-container">
         <div className="">
-          <h2 className="head">Know who we are</h2>
+          <h2 className="head-h2">Know who we are</h2>
           <h1 className="head-h1">CollarCard</h1>
         </div>
 
         <div className="para-about">
-          <p className>
+          <p className ="text-lg">
             A CollarCard is a credit card sized plastic card that contains four
             high quality pop-out collar stays that is <br /> stored in a man’s
             wallet. We invented CollarCards to address and fix the common
@@ -31,7 +31,7 @@ function About() {
         <div className="about-card">
           <div className="card-one">
             <ul>
-              <li>
+              <li className="text-lg">
                 <span>
                   <i class="fa-solid fa-chevron-right"></i>
                 </span>
@@ -39,14 +39,14 @@ function About() {
                 promotional products in the <br /> marketplace for men.
               </li>
 
-              <li>
+              <li className="text-lg">
                 <span></span>
                 <i class="fa-solid fa-chevron-right"></i>
                 CollarCards have a nearly 100% usage rate – <br /> which means
                 we can put your brand in a man’s <br /> wallet 24 hours a day.
               </li>
 
-              <li>
+              <li className="text-lg">
                 <span>
                   <i class="fa-solid fa-chevron-right"></i>
                 </span>
@@ -58,7 +58,7 @@ function About() {
 
           <div className="card-two">
             <ul>
-              <li>
+              <li className="text-lg">
                 <span>
                   <i class="fa-solid fa-chevron-right"></i>
                 </span>
@@ -66,7 +66,7 @@ function About() {
                 promotional products in the <br /> marketplace for men.
               </li>
 
-              <li>
+              <li className="text-lg">
                 <span>
                   <i class="fa-solid fa-chevron-right"></i>
                 </span>
@@ -74,7 +74,7 @@ function About() {
                 we can put your brand in a man’s <br /> wallet 24 hours a day.
               </li>
 
-              <li>
+              <li className="text-lg">
                 <span>
                   <i class="fa-solid fa-chevron-right"></i>
                 </span>
@@ -88,14 +88,14 @@ function About() {
 
       <div className="ordering">
         <div className="">
-          <h2 className="order-h2">Know how to order</h2>
-          <h1 className="order-h1">Ordering is Simple</h1>
+          <h2 className="order-h2 text-6xl">Know how to order</h2>
+          <h1 className="order-h1 text-5xl">Ordering is Simple</h1>
         </div>
 
         <div className="ordering-card-container">
           <div className="ordering-card">
             <img src={artwork} alt="" />
-            <p>
+            <p className="text-lg">
               Send us your high-resolution <br /> artwork for the front of your <br />
               CollarCard and the text you <br /> would like printed on the back <br /> of each
               collar stay on your <br /> CollarCard (email, website, <br /> and/or phone
@@ -105,7 +105,7 @@ function About() {
 
           <div className="ordering-card">
             <img src={email} alt="" />
-            <p>
+            <p className="text-lg">
               We will promptly create proofs <br /> and email them to you for
               your <br /> approval.
             </p>
@@ -113,7 +113,7 @@ function About() {
 
           <div className="ordering-card">
             <img src={card} alt="" />
-            <p>
+            <p className="text-lg">
               Once you approve and send <br /> payment, we will start to <br /> produce your
               order. Our typical <br /> turnaround time is very fast– <br /> usually only two
               weeks from <br /> the date of your order.

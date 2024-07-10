@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import video from "../assets/video.mp4";
-
+import "./Video.css";
 
 function Video() {
   const videoRef = useRef(null);
@@ -9,11 +9,11 @@ function Video() {
     if (videoRef.current) {
       videoRef.current.play();
     }
-  });
+  }, []);
+
   return (
     <>
       <video className="video-bar" controls muted ref={videoRef} autoPlay>
-        {" "}
         <source src={video} type="video/mp4" />
         Some Error
       </video>
