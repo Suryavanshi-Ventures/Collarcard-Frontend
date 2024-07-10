@@ -1,3 +1,4 @@
+
 .about-container,
 .ordering,
 .compare-container {
@@ -7,28 +8,28 @@
 }
 
 .head-h1 {
-  color: #0066ff;
-  font-family: "Open Sans", Sans-serif;
-  font-size: 56px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-align: center;
-  margin-top: -60px;
+  color: #0066FF;
+    font-family: "Open Sans", Sans-serif;
+    font-size: 59px;
+    font-weight:lighter;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin-top: -50px;
 }
 
-.head {
-  color: rgba(0, 0, 0, 0.1);
-  font-family: "Open Sans", Sans-serif;
-  font-size: 69px;
-  font-weight: 500;
-  text-align: center;
+.head-h2{
+   color: #0000000A;
+    font-family: "Open Sans", Sans-serif;
+    font-size: 68px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .para-about {
   text-align: center;
   color: #000000;
   font-family: "Work Sans", Sans-serif;
-  font-size: 18px;
+ 
   font-weight: normal;
   line-height: 25px;
   letter-spacing: 1px;
@@ -51,7 +52,7 @@ li {
   text-align: start;
   color: #000000;
   font-family: "Work Sans", Sans-serif;
-  font-size: 18px;
+
   font-weight: normal;
   line-height: 25px;
   letter-spacing: 1.5px;
@@ -79,21 +80,21 @@ li {
 }
 
 .order-h2 {
-  color: rgba(0, 0, 0, 0.1);
-  font-family: "Open Sans", Sans-serif;
-  font-size: 68px;
-  font-weight: 400;
+  color: #0000000A;
+
+
+  font-weight: 600;
   text-align: center;
 }
 
 .order-h1 {
-  color: #0066ff;
+  color: #0066FF;
   font-family: "Open Sans", Sans-serif;
-  font-size: 56px;
-  font-weight: 500;
+;
+  font-weight: 600;
   letter-spacing: 0.5px;
   text-align: center;
-  margin-top: -60px;
+  margin-top: -25px;
 }
 
 .ordering-card {
@@ -106,7 +107,7 @@ li {
   text-align: center;
   flex: 1 1 300px;
   max-width: 300px;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .ordering-card img {
@@ -118,10 +119,11 @@ li {
 }
 
 .ordering-card p {
-  text-align: center;
+  color: #000000;
+  font-family: "Work Sans", Sans-serif;
+font-weight: normal;
+margin-top:-15px;
   letter-spacing: 0.1px;
-  font-size: 17px;
-  color: #333;
 }
 
 .compare-container {
@@ -240,5 +242,59 @@ li {
   .ordering-card img {
     width: 40px;
     top: -30px;
+  }
+}
+@media (max-width: 1199px) {
+  .head-h1 {
+    font-size: 48px;
+    margin-top: -45px;
+  }
+
+  .head-h2 {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 992px) {
+  .head-h1 {
+    font-size: 40px;
+    margin-top: -40px;
+  }
+
+  .head-h2 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .head-h1 {
+    font-size: 36px;
+    margin-top: -35px;
+  }
+
+  .head-h2 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .head-h1 {
+    font-size: 28px;
+    margin-top: -25px;
+  }
+
+  .head-h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 320px) {
+  .head-h1 {
+    font-size: 24px;
+    margin-top: -15px;
+  }
+
+  .head-h2 {
+    font-size: 28px;
   }
 }
