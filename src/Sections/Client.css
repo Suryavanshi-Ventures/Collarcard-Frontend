@@ -15,9 +15,9 @@
   }
   
   .button-client-container button {
-    padding: 8px;
-    background-color: #0066ff;
-    color: white;
+    /* padding: 8px; */
+    /* background-color: #0066ff; */
+    /* color: w; */
     font-size: 15px;
     border: none;
     cursor: pointer;
@@ -27,7 +27,7 @@
   }
   
   .button-client-container button:hover {
-    background-color: #0052cc;
+    /* background-color: #0052cc; */
   }
   
   .button-client-container ul {

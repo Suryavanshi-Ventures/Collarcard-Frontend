@@ -9,7 +9,7 @@ import { Autoplay, EffectCreative, Navigation, Pagination } from "swiper/modules
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-creative";
-import"swiper/css/pagination"
+import "swiper/css/pagination"
 
 const settings = {
   dots: true,
@@ -77,28 +77,36 @@ export default Testimonial;
 
 const Slider = ({ testimonials }) => {
   return (
-    <div className="relative w-full h-[408.5px] opacity-90 overflow-hidden">
+    <div className="relative w-full h-[450px] lg:h-[408.5px] opacity-90 overflow-hidden">
       <Swiper
         grabCursor={true}
         effect={"creative"}
-        className={"w-[90%] mySwiper h-full"}
+        className={"lg:w-[90%] w-[78%] mySwiper h-full"}
         loop={true}
+        spaceBetween={10}
         breakpoints={{
           1200: {
-            slidesPerView: 2.1,
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          390: {
+            slidesPerView: 1,
           },
         }}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
         }}
+
         modules={[Navigation, Pagination]}
         speed={1300}
         pagination={{ clickable: true }}
         creativeEffect={{
           prev: {
             shadow: true,
-            translate: [0, 0, -500],
+            translate: [0, 0, -200],
           },
           next: {
             translate: ["100%", 0, 0],
@@ -110,15 +118,19 @@ const Slider = ({ testimonials }) => {
         }}
       >
         {testimonials?.map((data, index) => (
-          <SwiperSlide className="testimonial-item h-[85%]" key={index}>
-            <div className="testimonial-text-container">
+          // testimonial-item
+          <SwiperSlide
+            className="flex rounded-[10px] p-[10px] lg:p-[20px] justify-between bg-[#0066FF] flex-col mb-[15px] border border-[#0066FF] h-[85%]"
+            key={index}
+          >
+            <div className="testimonial-text-container relative bg-white text-[#0066FF] p-[10px] rounded-[10px] before:absolute before:-bottom-3 before:left-5 before:border-t-[15px] before:border-t-white before:border-x-[10px] before:border-x-transparent">
               <p>{data.text}</p>
             </div>
-            <div className="testimonial-info-container">
-              <div className="testimonial-name-container">
+            <div className="testimonial-info-container mt-4">
+              <div className="testimonial-name-container text-white font-bold">
                 <p>{data.name}</p>
               </div>
-              <div className="testimonial-position-container">
+              <div className="testimonial-position-container text-white">
                 <p>{data.position}</p>
               </div>
             </div>
