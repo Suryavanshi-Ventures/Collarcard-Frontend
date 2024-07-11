@@ -1,8 +1,4 @@
 
-.container {
-  width: 100%;
-}
-
 .h1-collar {
   color: #0000000A;
   font-family: "Open Sans", Sans-serif;
@@ -25,10 +21,12 @@
   text-align: center;
   color: #000000;
   font-family: "Work Sans", Sans-serif;
- 
+ width: 50%;
   font-weight: normal;
   line-height: 26px;
   letter-spacing: 1px;
+  align-items: center;
+  margin: 0 auto;
   
 }
 
@@ -95,6 +93,8 @@
   .collar-card-p {
     font-size: 14px;
     line-height: 22px;
+  
+  
   }
 
   .btn {
@@ -127,6 +127,7 @@
 @media (max-width: 576px) {
   .h1-collar {
     font-size: 24px;
+
   }
 
   .h2-collar {
@@ -137,6 +138,7 @@
   .collar-card-p {
     font-size: 10px;
     line-height: 18px;
+    
   }
 
   .btn {

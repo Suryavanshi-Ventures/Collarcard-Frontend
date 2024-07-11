@@ -53,8 +53,8 @@ function Testimonial() {
             <div className='about-container w-full h-[80%] rotate-[1.5deg]'>
               <div className=' h-[90%]'>
                 <div className="testimonials">
-                  <h2>What Client Say</h2>
-                  <h1>Testimonials</h1>
+                  <h1 className="testimonial-h1">What Client Say</h1>
+                  <h1 className="testimonial-h1-h1">Testimonials</h1>
                 </div>
                 <Slider testimonials={testimonials} />
               </div>

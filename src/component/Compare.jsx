@@ -4,7 +4,7 @@ import back from "../assets/back.png"
 function Compare() {
   return (
     <>
-    <div className="compare-container">
+    <div className="compare-container mt-10">
         <div className="left-compare">
   <img src={back} alt="" />
         </div>

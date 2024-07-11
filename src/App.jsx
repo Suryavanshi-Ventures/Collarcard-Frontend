@@ -11,13 +11,17 @@ import Footer from "./component/Footer";
 import Testimonial from "./Sections/Testimonial";
 import CollarCard from "./Sections/CollarCard";
 import UsesRate from "./component/UsesRate";
-
+import MainContainer from "./component/Container/MainContainer";
+import BGContainer from "./component/Container/BGContainer"
 function App() {
   return (
     <Router>
       <>
-        <Navbar />
-        <Routes>
+   
+
+      <MainContainer >
+      <Navbar />
+      <Routes>
           <Route path="/" element={<Section1 />} />
           <Route path="/about" element={<About />} />
           <Route path="/clients" element={<Client />} />
@@ -25,16 +29,35 @@ function App() {
           <Route path="/faq" element={<FAQComponent />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+      <About/>
+      </MainContainer>
+      <BGContainer>
 
-        <About/>
-        <UsesRate/>
-        <Patent/>
-        <FAQComponent/>
-        <Client/>
-        <Testimonial />
-        <Contact/>
-        <CollarCard />
-        <Footer />
+      <UsesRate/>
+      </BGContainer>
+      <MainContainer>
+
+      <Patent/>
+      <FAQComponent/>
+            
+      <Client/>
+      </MainContainer>
+    
+      <Testimonial />
+      <MainContainer>
+      <Contact/>
+      <CollarCard />
+      
+      </MainContainer>
+  
+
+    
+     
+       
+      <Footer />
+       
+
+
       </>
     </Router>
   );

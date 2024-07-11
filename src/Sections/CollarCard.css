@@ -1,6 +1,6 @@
 .collar-card-container {
   
-   margin-top: 130px;
+   margin-top: 30px;
 }
 
 .collar-card-img {
@@ -33,22 +33,15 @@
     list-style: none;
 }
 
-.li-border {
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    padding: 10px;
-    text-align: center;
-}
-
 .menu-list {
     display: flex;
-    gap: 40px;
+    flex-wrap: wrap; 
+    gap: 20px;
     padding: 0;
     margin-top: 20px;
     list-style: none;
     text-align: center;
     justify-content: center;
-
 }
 
 .menu-list li {
@@ -56,12 +49,8 @@
 }
 
 @media (min-width: 768px) {
-    .collar-card-container {
-        flex-direction: row;
-        gap: 40px;
-    }
-
     .menu-list {
-        flex-direction: row;
+        flex-wrap: nowrap; 
+        gap: 40px; 
     }
 }

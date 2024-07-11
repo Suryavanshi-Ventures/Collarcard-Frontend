@@ -9,12 +9,11 @@
 
 .head-h1 {
   color: #0066FF;
-    font-family: "Open Sans", Sans-serif;
-    font-size: 59px;
-    font-weight:lighter;
-    letter-spacing: 0.5px;
-    text-align: center;
-    margin-top: -50px;
+  font-family: "Open Sans", Sans-serif;
+  font-weight: lighter;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin-top: -50px;
 }
 
 .head-h2{
@@ -29,7 +28,7 @@
   text-align: center;
   color: #000000;
   font-family: "Work Sans", Sans-serif;
- 
+   
   font-weight: normal;
   line-height: 25px;
   letter-spacing: 1px;
@@ -81,8 +80,8 @@ li {
 
 .order-h2 {
   color: #0000000A;
-
-
+  font-family: "Open Sans", Sans-serif;
+  
   font-weight: 600;
   text-align: center;
 }
@@ -157,6 +156,9 @@ margin-top:-15px;
 
   .para-about {
     font-size: 16px;
+    text-align: center;
+    margin: 0 auto;
+    
   }
 
   li {
@@ -197,9 +199,21 @@ margin-top:-15px;
   }
 }
 
+@media only screen and (min-width: 900px) and (max-width: 1440px) {
+  .para-about {
+    font-size: 28px;
+    margin-top: -25px;
+    text-align: center;
+    
+    
+  }
+  .head-h1{
+    font-size: 58px;
+  }
+}
 @media (max-width: 576px) {
   .head-h1 {
-    font-size: 28px;
+    font-size: 25px;
     margin-top: -25px;
   }
 
@@ -296,5 +310,24 @@ margin-top:-15px;
 
   .head-h2 {
     font-size: 28px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .order-h2 {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .order-h2 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .order-h2 {
+    font-size: 22px;
   }
 }

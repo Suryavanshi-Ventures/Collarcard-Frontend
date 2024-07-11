@@ -59,7 +59,6 @@
     border-radius: 10px;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
     .h1-get {
         font-size: 48px;

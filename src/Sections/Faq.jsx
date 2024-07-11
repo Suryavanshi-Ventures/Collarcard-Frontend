@@ -151,9 +151,9 @@ const FAQComponent = () => {
 
   return (
     <div className="faq-container faq">
-      <h2>FAQs</h2>
-      <h1>Frequently Asked Questions</h1>
-      <div className="flex flex-col lg:flex-row justify-between">
+      <h1 className="faqs-h1">FAQs</h1>
+      <h1 className="faq-h1">Frequently Asked Questions</h1>
+      <div className="flex flex-col lg:flex-row justify-between mt-5">
         <div className="w-full lg:w-[49%]">
           <RenderQuestion faqs={questionsLeft} />
           {/* {renderQuestions(questionsLeft, "left")} */}
@@ -185,7 +185,7 @@ const RenderQuestion = ({ faqs }) => {
   console.log("expandedItems", expandedItems)
 
   return (
-    <div className="font-sans border border-gray-300">
+    <div className="font-sans border border-gray-200">
       {faqs.map((faq, index) => (
         <div
           key={faq?.id}

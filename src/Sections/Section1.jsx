@@ -21,8 +21,8 @@ function Section1() {
 
         <div className="collar-card-p">
           <p className="text-lg">
-            A CollarCard is a credit card sized plastic card <br /> that contains four
-            high quality pop-out collar stays <br /> that is stored in a man’s wallet.
+            A CollarCard is a credit card sized plastic card  that contains four
+            high quality pop-out collar staysthat is stored in a man’s wallet.
           </p>
         </div>
 

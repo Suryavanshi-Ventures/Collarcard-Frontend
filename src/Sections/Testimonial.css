@@ -102,13 +102,13 @@ body {
   margin-bottom: 20px;
 }
 
-.testimonials h2 {
+.testimonial-h1{
   color: rgba(0, 0, 0, 0.1);
-  font-size: 30px;
+  font-size: 65px;
   font-weight: 300;
 }
 
-.testimonials h1 {
+.testimonial-h1-h1 {
   color: #0066ff;
   font-size: 56px;
   font-weight: 400;
@@ -168,11 +168,11 @@ body {
     flex-direction: column;
   }
 
-  .testimonials h2 {
-    font-size: 25px;
+  .testimonial-h1 {
+    font-size: 50px;
   }
 
-  .testimonials h1 {
+  .testimonial-h1-h1 {
     font-size: 48px;
   }
 
@@ -191,11 +191,11 @@ body {
     width: 90%;
   }
 
-  .testimonials h2 {
-    font-size: 20px;
+  .testimonial-h1 {
+    font-size: 30px;
   }
 
-  .testimonials h1 {
+  .testimonial-h1-h1 {
     font-size: 40px;
   }
 
@@ -218,8 +218,8 @@ body {
     width: 95%;
   }
 
-  .testimonials h2 {
-    font-size: 18px;
+  .testimonial-h1 {
+    font-size: 28px;
   }
 
   .testimonials h1 {

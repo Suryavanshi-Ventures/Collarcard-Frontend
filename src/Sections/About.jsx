@@ -9,21 +9,21 @@ function About() {
   return (
     < >
     <div id="about">
-      <div className="about-container">
+      <div className="about-container mt-10">
         <div className="">
-          <h2 className="head-h2">Know who we are</h2>
-          <h1 className="head-h1">CollarCard</h1>
+          <h2 className="head-h2  ">Know who we are</h2>
+          <h1 className="head-h1 ">CollarCard</h1>
         </div>
 
-        <div className="para-about">
+        <div className="para-about mt-6">
           <p className ="text-lg">
             A CollarCard is a credit card sized plastic card that contains four
-            high quality pop-out collar stays that is <br /> stored in a man’s
+            high quality pop-out collar stays that is stored in a man’s
             wallet. We invented CollarCards to address and fix the common
-            problem of men forgetting <br /> their collar stays when they leave
+            problem of men forgetting  their collar stays when they leave
             the house, when they are traveling, or for any occasion when they
-            are <br /> wearing a dress shirt. CollarCards are a great
-            promotional product for any company – we have a 100% usage <br />{" "}
+            are wearing a dress shirt. CollarCards are a great
+            promotional product for any company – we have a 100% usage 
             rate and can put any brand in a man’s wallet.
           </p>
         </div>
@@ -35,23 +35,23 @@ function About() {
                 <span>
                   <i class="fa-solid fa-chevron-right"></i>
                 </span>
-                CollarCards are one of the most unique and <br /> effective
-                promotional products in the <br /> marketplace for men.
+                CollarCards are one of the most unique and  effective
+                promotional products in the marketplace for men.
               </li>
 
               <li className="text-lg">
                 <span></span>
                 <i class="fa-solid fa-chevron-right"></i>
-                CollarCards have a nearly 100% usage rate – <br /> which means
-                we can put your brand in a man’s <br /> wallet 24 hours a day.
+                CollarCards have a nearly 100% usage rate – which means
+                we can put your brand in a man’s  wallet 24 hours a day.
               </li>
 
               <li className="text-lg">
                 <span>
                   <i class="fa-solid fa-chevron-right"></i>
                 </span>
-                Our low price point makes CollarCards one of <br /> the most
-                cost-effective promotional products <br /> on the market.
+                Our low price point makes CollarCards one of  the most
+                cost-effective promotional products on the market.
               </li>
             </ul>
           </div>
@@ -62,31 +62,31 @@ function About() {
                 <span>
                   <i class="fa-solid fa-chevron-right"></i>
                 </span>
-                CollarCards are one of the most unique and <br /> effective
-                promotional products in the <br /> marketplace for men.
+                CollarCards are one of the most unique and  effective
+                promotional products in the marketplace for men.
               </li>
 
               <li className="text-lg">
                 <span>
                   <i class="fa-solid fa-chevron-right"></i>
                 </span>
-                CollarCards have a nearly 100% usage rate – <br /> which means
-                we can put your brand in a man’s <br /> wallet 24 hours a day.
+                CollarCards have a nearly 100% usage rate – which means
+                we can put your brand in a man’s wallet 24 hours a day.
               </li>
 
               <li className="text-lg">
                 <span>
                   <i class="fa-solid fa-chevron-right"></i>
                 </span>
-                Our low price point makes CollarCards one of <br /> the most
-                cost-effective promotional products <br /> on the market.
+                Our low price point makes CollarCards one of  the most
+                cost-effective promotional products on the market.
               </li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div className="ordering">
+      <div className="ordering mt-6">
         <div className="">
           <h2 className="order-h2 text-6xl">Know how to order</h2>
           <h1 className="order-h1 text-5xl">Ordering is Simple</h1>
