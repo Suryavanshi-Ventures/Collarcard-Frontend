@@ -19,25 +19,25 @@ function CollarCard() {
       </div>
 
       <ul className="menu-list cursor-pointer">
-      <li className='p-2 border-b-[1.6px] border-transparent hover:border-black'>
-        <Link to="home" smooth={true} duration={600}>Home</Link>
-      </li>
-      <li className='p-2 border-b-[1.6px] border-transparent hover:border-black'>
-        <Link to="about" smooth={true} duration={600}>About us</Link>
-      </li>
-      <li className='p-2 border-b-[1.6px] border-transparent hover:border-black'>
-        <Link to="clients" smooth={true} duration={600}>Clients</Link>
-      </li>
-      <li className='p-2 border-b-[1.6px] border-transparent hover:border-black'>
-        <Link to="patents" smooth={true} duration={600}>Patents</Link>
-      </li>
-      <li className='p-2 border-b-[1.6px] border-transparent hover:border-black'>
-        <Link to="faq" smooth={true} duration={600}>FAQs</Link>
-      </li>
-      <li className='p-2 border-b-[1.6px] border-transparent hover:border-black'>
-        <Link to="contact" smooth={true} duration={600}>Contact</Link>
-      </li>
-    </ul>
+        <li className='p-2 border-b-[1.6px] border-transparent hover:border-black'>
+          <Link to="home" smooth={true} duration={600}>Home</Link>
+        </li>
+        <li className='p-2 border-b-[1.6px] border-transparent hover:border-black'>
+          <Link to="about" smooth={true} duration={600}>About us</Link>
+        </li>
+        <li className='p-2 border-b-[1.6px] border-transparent hover:border-black'>
+          <Link to="clients" smooth={true} duration={600}>Clients</Link>
+        </li>
+        <li className='p-2 border-b-[1.6px] border-transparent hover:border-black'>
+          <Link to="patents" smooth={true} duration={600}>Patents</Link>
+        </li>
+        <li className='p-2 border-b-[1.6px] border-transparent hover:border-black'>
+          <Link to="faq" smooth={true} duration={600}>FAQs</Link>
+        </li>
+        <li className='p-2 border-b-[1.6px] border-transparent hover:border-black'>
+          <Link to="contact" smooth={true} duration={600}>Contact</Link>
+        </li>
+      </ul>
     </div>
   );
 }
