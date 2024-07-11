@@ -37,38 +37,38 @@ function Client() {
   const [isSection01InView, setIsSection01InView] = useState(false);
   const [isSectionInView, setIsSectionInView] = useState(false);
 
-
   const clients = [
-    { src: meridian, category: "Business" },
-    { src: tidewell, category: "Business" },
-    { src: zodiac, category: "Business" },
-    { src: hollywood, category: "Hotel" },
-    { src: simcoe, category: "Business" },
-    { src: orion, category: "Business" },
-    { src: sawmill, category: "Business" },
-    { src: attractive, category: "Business" },
-    { src: resoniance, category: "Hotel" },
-    { src: redwood, category: "Business" },
-    { src: robert, category: "Business" },
-    { src: legalSupport, category: "Business" },
-    { src: magnani, category: "Fashion" },
-    { src: hotel, category: "Hotel" },
-    { src: capitalIq, category: "Business" },
-    { src: tommyH, category: "Fashion" },
-    { src: redHanger, category: "Dry Cleaners" },
-    { src: kpmg, category: "Business" },
-    { src: hyatt, category: "Hotel" },
-    { src: savills, category: "Business" },
-    { src: crawford, category: "Hotel" },
-    { src: mfs, category: "Business" },
-    { src: stepehens, category: "Business" },
-    { src: butchBlum, category: "Fashion" },
-    { src: knightHotel, category: "Hotel" },
-    { src: malofus, category: "Fashion" },
-    { src: archerCapital, category: "Business" },
-    { src: perry, category: "Fashion" },
-    { src: dependableCleaner, category: "Dry Cleaners" },
+    { id: 1, src: resoniance, category: "Hotel" },
+    { id: 2, src: crawford, category: "Hotel" },
+    { id: 3, src: hollywood, category: "Hotel" },
+    { id: 4, src: sawmill, category: "Business" },
+    { id: 5, src: archerCapital, category: "Business" },
+    { id: 6, src: hyatt, category: "Hotel" },
+    { id: 7, src: orion, category: "Business" },
+    { id: 8, src: dependableCleaner, category: "Dry Cleaners" },
+    { id: 9, src: tidewell, category: "Business" },
+    { id: 10, src: hotel, category: "Hotel" },
+    { id: 11, src: redHanger, category: "Dry Cleaners" },
+    { id: 12, src: meridian, category: "Business" },
+    { id: 13, src: savills, category: "Business" },
+    { id: 14, src: capitalIq, category: "Business" },
+    { id: 15, src: butchBlum, category: "Fashion" },
+    { id: 16, src: simcoe, category: "Business" },
+    { id: 17, src: kpmg, category: "Business" },
+    { id: 18, src: robert, category: "Business" },
+    { id: 19, src: tommyH, category: "Fashion" },
+    { id: 20, src: magnani, category: "Fashion" },
+    { id: 22, src: mfs, category: "Business" },
+    { id: 23, src: attractive, category: "Business" },
+    { id: 24, src: redwood, category: "Business" },
+    { id: 25, src: legalSupport, category: "Business" },
+    { id: 26, src: perry, category: "Fashion" },
+    { id: 27, src: malofus, category: "Fashion" },
+    { id: 28, src: knightHotel, category: "Hotel" },
+    { id: 29, src: zodiac, category: "Business" },
+    { id: 30, src: stepehens, category: "Business" },
   ];
+
 
   function handleCategoryChange(category) {
     setSelectedCategory(category)
@@ -116,56 +116,52 @@ function Client() {
       <h1 className="h1-client">Works</h1>
       <h1 className="h1-our-client">Our Clients</h1>
       <div className="button-client-container">
-        <ul>
-          <li>
+        <ul >
+          <li className={`hover:bg-[#0066FF] font-semibold font-sans p-2 hover:text-white ${selectedCategory == "ALL" && "bg-[#0066FF] text-white "}`}>
             <button onClick={() => handleCategoryChange("ALL")}>ALL</button>
           </li>
-          <li>
+          <li className={`hover:bg-[#0066FF] font-semibold font-sans p-2 hover:text-white ${selectedCategory == "Business" && "bg-[#0066FF] text-white "}`}>
             <button onClick={() => handleCategoryChange("Business")}>Business</button>
           </li>
-          <li>
+          <li className={`hover:bg-[#0066FF] font-semibold font-sans  p-2 hover:text-white ${selectedCategory == "Dry Cleaners" && "bg-[#0066FF] text-white "}`}>
             <button onClick={() => handleCategoryChange("Dry Cleaners")}>Dry Cleaners</button>
           </li>
-          <li>
+          <li className={`hover:bg-[#0066FF]  font-semibold font-sans p-2 hover:text-white ${selectedCategory == "Fashion" && "bg-[#0066FF] text-white "}`}>
             <button onClick={() => handleCategoryChange("Fashion")}>Fashion</button>
           </li>
-          <li>
+          <li className={`hover:bg-[#0066FF] font-semibold font-sans p-2 hover:text-white ${selectedCategory == "Hotel" && "bg-[#0066FF] text-white "}`}>
             <button onClick={() => handleCategoryChange("Hotel")}>Hotel</button>
           </li>
         </ul>
       </div>
-      <div className="client-img-container mt-10 overflow-hidden">
-      <SectionTracker
-            sectionId="client1"
-            onInViewChange={handleInViewChange1}
-          />
+      <div className="client-img-container  about-container mt-10 overflow-hidden justify-start">
+        <SectionTracker
+          sectionId="client1"
+          onInViewChange={handleInViewChange1}
+        />
         <AnimatePresence>
           {filteredClients.slice(0, 12).map((client, index) => {
             const direction = getRandomDirection(selectedCategory);
             return (
               <motion.div
-              initial={{ scale: 0 }}
-              animate={isSectionInView && { scale: 1 }}
-              transition={isSectionInView && { duration: 0.5, ease: "easeInOut" }}
-            >
-              <motion.img
-                key={client.src}
-                src={client.src}
-                alt=""
-
-                initial={{ opacity: 0, ...direction }}
-                animate={{ opacity: 1, x: 0, y: 0 }}
-                exit={{ opacity: 0, ...direction }}
-                transition={{ duration: 0.5 }}
-              />
+                key={`${client.src}-${selectedCategory}-${index}`} // Ensure unique key based on category
+                initial={{ scale: 0 }}
+                animate={isSectionInView && { scale: 1 }}
+                transition={isSectionInView && { duration: 0.5, ease: "easeInOut" }}
+              >
+                <motion.img
+                  src={client.src}
+                  alt=""
+                  initial={{ opacity: 0, ...direction }}
+                  animate={{ opacity: 1, x: 0, y: 0 }}
+                  exit={{ opacity: 0, ...direction }}
+                  transition={{ duration: 0.5 }}
+                />
               </motion.div>
             );
           })}
-          <SectionTracker
-            sectionId="client"
-            onInViewChange={handleInViewChange}
-          />
-          {filteredClients.slice(13, filteredClients.length).map((client, index) => {
+          <SectionTracker sectionId="client" onInViewChange={handleInViewChange} />
+          {filteredClients.slice(12).map((client, index) => {
             const direction = getRandomDirection(selectedCategory);
             const shouldAnimateFromBottom = isSection01InView === true; 
 
@@ -185,14 +181,15 @@ function Client() {
               opacity: 0,
               ...direction,
             };
+
             return (
               <motion.div
+                key={`${client.src}-${selectedCategory}-${index + 12}`} // Ensure unique key based on category
                 initial={{ scale: 0 }}
                 animate={isSection01InView && { scale: 1 }}
                 transition={isSection01InView && { duration: 1, ease: "easeInOut" }}
               >
                 <motion.img
-                  key={client.src}
                   src={client.src}
                   alt=""
                   initial={initialAnimation}
