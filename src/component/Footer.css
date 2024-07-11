@@ -2,15 +2,40 @@
     width: 100%;
     height: auto;
     background-color: #0e5bcf;
-    padding: 20px 0; 
+    padding: 20px 0;
 }
 
 .footer-container p {
-    color: white;
-    text-align: center;
-    margin: 0; 
+    color: #FFFFFF;
+    font-family: "Open Sans", Sans-serif;
     font-size: 14px;
-    font-family: 'Open Sans", Sans-serif';
-    letter-spacing: 0.4px;
-    line-height: 22px
+    font-weight: normal;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .footer-container p {
+        font-size: 13px;
+        line-height: 20px;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-container p {
+        font-size: 12px;
+        line-height: 18px;
+        padding: 0 5px;
+    }
+}
+
+@media (max-width: 400px) {
+    .footer-container p {
+        font-size: 11px;
+        line-height: 16px;
+        padding: 0 5px;
+    }
 }

@@ -1,52 +1,28 @@
-.h1-trademark{
+.h1-trademark {
   color: #0000000A;
   font-family: "Open Sans", Sans-serif;
- 
   font-weight: 600;
   text-align: start;
-  color: #0000000A;
-    font-family: "Open Sans", Sans-serif;
-    font-size: 42px;
-
+  font-size: 32px; 
 }
-.h1-patent{
+
+.h1-patent {
   color: #0066FF;
   font-family: "Open Sans", Sans-serif;
-  font-size: 55px;
+  font-size: 40px;
   font-weight: lighter;
   letter-spacing: 0.5px;
   text-align: start;
-  margin-top: -40px;
-
-  color: #0066FF;
-    font-family: "Open Sans", Sans-serif;
-    font-size: 56px;
-   
-    
-}
-/* li{
-  
-  margin-top: 3px;
-} */
-
-
-/* .patent-card{
-  display: flex;
-  justify-content:space-around;
-align-items: center;
-  width: 100%;
+  margin-top: -20px; 
 }
 
-.left-card{
-  width: 50%;
-  align-items: center;
-}
+@media (min-width: 768px) {
+  .h1-trademark {
+    font-size: 42px; 
+  }
 
-
-.right-card{
-  width: 50%;
-  align-items: center;
-} */
-.patent-container{
-  
+  .h1-patent {
+    font-size: 55px;
+    margin-top: -35px; 
+  }
 }

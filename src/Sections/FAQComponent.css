@@ -1,27 +1,25 @@
-.faq-container h2{
-  color: rgba(0, 0, 0, 0.1);
-  font-family: "Open Sans", Sans-serif;
-  font-size: 40px;
-  font-weight: 500;
-  margin-top: 40px;
+.faqs-h1 {
+  color: #0000000A;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.625rem; 
+  font-weight: 600;
   text-align: center;
 }
-.faq-container h1{
-  color: #0066ff;
-  font-family: "Open Sans", Sans-serif;
-  font-size: 56px;
-  font-weight:500;
+
+.faq-h1 {
+  color: #0066FF;
+  font-family: sans-serif;
+  font-size: 3.5rem; 
   letter-spacing: 0.5px;
-  margin-top: -45px;
   text-align: center;
-  margin-bottom: 20px;
+
 }
 
 .faq-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 1.25rem; 
 }
 
 .faq-content {
@@ -33,22 +31,21 @@
 .faq-column {
   flex: 1;
   min-width: 300px;
-  margin: 10px;
+  margin: 0.625rem; 
 }
 
 .faq-item {
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 5px;
-  margin-bottom: 10px;
-  padding: 15px;
+  margin-bottom: 0.625rem; 
+  padding: 0.9375rem;
   cursor: pointer;
   transition: background-color 0.5s;
 }
 
 .faq-item p {
   margin: 0;
- 
 }
 
 .faq-item p span {
@@ -57,21 +54,40 @@
 }
 
 .faq-answer {
-  margin-top: 10px;
-  padding-top: 10px;
+  margin-top: 0.625rem; 
+  padding-top: 0.625rem; 
   border-top: 1px solid #ddd;
   background-color: #ddd;
   letter-spacing: 0.1px;
-  font-size: 16px;
-  padding: 20px;
+  font-size: 1rem; 
+  padding: 1.25rem;
 }
 
 @media (max-width: 768px) {
+  .faq-content {
+    flex-direction: column;
+  }
+
   .faq-column {
     flex: 1 1 100%;
+    margin: 0.625rem 0; 
   }
 }
 
-.slow-open {
-  transition: height 0.5s ease;
+@media (max-width: 480px) {
+  .faqs-h1 {
+    font-size: 2rem; 
+  }
+
+  .faq-h1 {
+    font-size: 2.5rem;
+  }
+
+  .faq-item {
+    padding: 0.625rem; 
+  }
+
+  .faq-answer {
+    padding: 1rem; 
+  }
 }

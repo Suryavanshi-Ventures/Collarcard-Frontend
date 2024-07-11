@@ -82,19 +82,19 @@ function Client() {
 
   const getRandomDirection = (category) => {
     if (category === "Dry Cleaners" || category === "Fashion") {
-      return { z: -100, y: 100 }; // Come from back side and bottom
+      return { z: -100, y: 100 };
     } else if (category === "Business" || category === "ALL") {
       const directions = [
-        { x: 100, y: 0 },  // from right
-        { x: -100, y: 0 }, // from left
-        { x: 0, y: 100 },  // from bottom
-        { x: 0, y: -100 }  // from top
+        { x: 100, y: 0 },  
+        { x: -100, y: 0 }, 
+        { x: 0, y: 100 },  
+        { x: 0, y: -100 } 
       ];
       return directions[Math.floor(Math.random() * directions.length)];
     } else if (category === "Hotel") {
-      return { x: -100, y: 0 }; // Come from left side
+      return { x: -100, y: 0 }; 
     }
-    // Default direction if category doesn't match
+    
     return { x: 0, y: 0 };
   };
 
@@ -113,8 +113,8 @@ function Client() {
 
   return (
     <div id="clients">
-      <h2 className="h2-client">Works</h2>
-      <h1 className="h1-client">Our Clients</h1>
+      <h1 className="h1-client">Works</h1>
+      <h1 className="h1-our-client">Our Clients</h1>
       <div className="button-client-container">
         <ul>
           <li>
@@ -167,12 +167,12 @@ function Client() {
           />
           {filteredClients.slice(13, filteredClients.length).map((client, index) => {
             const direction = getRandomDirection(selectedCategory);
-            const shouldAnimateFromBottom = isSection01InView === true; // Replace with your actual condition
+            const shouldAnimateFromBottom = isSection01InView === true; 
 
             const initialAnimation = {
               opacity: 0,
               ...direction,
-              ...(shouldAnimateFromBottom ? { y: 100 } : {}), // Initial position off-screen bottom if condition is true
+              ...(shouldAnimateFromBottom ? { y: 100 } : {}),  
             };
 
             const animateAnimation = {
