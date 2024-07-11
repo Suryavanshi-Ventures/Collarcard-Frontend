@@ -1,0 +1,1 @@
+<img className="w-[15px] h-[15px]" src="https://cdn-icons-png.flaticon.com/512/43/43625.png"/> : <img className="w-[15px] h-[15px]" src="https://cdn-icons-png.flaticon.com/512/748/748113.png"/>
