@@ -1,4 +1,3 @@
-
 .about-container,
 .ordering,
 .compare-container {
@@ -8,27 +7,32 @@
 }
 
 .head-h1 {
-  color: #0066FF;
-  font-family: "Open Sans", Sans-serif;
-  font-weight: lighter;
+  color: #0066ff;
+
+  font-weight: bold;
   letter-spacing: 0.5px;
   text-align: center;
   margin-top: -50px;
+
+  font-size: 58px;
+
+  text-align: center;
+  margin-top: -60px;
 }
 
-.head-h2{
-   color: #0000000A;
-    font-family: "Open Sans", Sans-serif;
-    font-size: 68px;
-    font-weight: bold;
-    text-align: center;
+.head-h2 {
+  color: #0000000A;
+  font-family: "Open Sans", Sans-serif;
+  font-size: 69px;
+  font-weight: 600;
+  text-align: center;
 }
 
 .para-about {
   text-align: center;
   color: #000000;
   font-family: "Work Sans", Sans-serif;
-   
+
   font-weight: normal;
   line-height: 25px;
   letter-spacing: 1px;
@@ -65,7 +69,6 @@ li {
   margin-right: 10px;
 }
 
-
 .ordering {
   margin-top: 50px;
 }
@@ -79,23 +82,21 @@ li {
 }
 
 .order-h2 {
-  color: #0000000A;
+  color: #0000000a;
   font-family: "Open Sans", Sans-serif;
-  
+
   font-weight: 600;
   text-align: center;
 }
 
 .order-h1 {
-  color: #0066FF;
+  color: #0066ff;
   font-family: "Open Sans", Sans-serif;
-;
   font-weight: 600;
   letter-spacing: 0.5px;
   text-align: center;
   margin-top: -25px;
 }
-
 .ordering-card {
   background-color: white;
   border: 1px solid #e0e0e0;
@@ -105,7 +106,7 @@ li {
   padding: 10px;
   text-align: center;
   flex: 1 1 300px;
-  max-width: 300px;
+  max-width: 330px;
   margin-top: 40px;
 }
 
@@ -120,9 +121,12 @@ li {
 .ordering-card p {
   color: #000000;
   font-family: "Work Sans", Sans-serif;
-font-weight: normal;
-margin-top:-15px;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 25px;
   letter-spacing: 0.1px;
+  width: 80%;
+ margin: 0 auto;
 }
 
 .compare-container {
@@ -142,7 +146,6 @@ margin-top:-15px;
   max-width: 100%;
 }
 
-
 @media (min-width: 768px) {
   .about-card {
     flex-direction: row;
@@ -158,7 +161,6 @@ margin-top:-15px;
     font-size: 16px;
     text-align: center;
     margin: 0 auto;
-    
   }
 
   li {
@@ -167,6 +169,7 @@ margin-top:-15px;
 
   .ordering-card {
     max-width: 400px;
+    height: 300px;
   }
 
   .ordering-card img {
@@ -199,17 +202,40 @@ margin-top:-15px;
   }
 }
 
-@media only screen and (min-width: 900px) and (max-width: 1440px) {
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
   .para-about {
     font-size: 28px;
     margin-top: -25px;
     text-align: center;
-    
-    
   }
-  .head-h1{
+
+  .head-h1 {
     font-size: 58px;
   }
+  .ordering-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: center;
+    height: 200px;
+  }
+  
+  .ordering-card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+    padding: 10px;
+    text-align: center;
+    flex: 1 1 300px;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+  
+  
 }
 @media (max-width: 576px) {
   .head-h1 {
@@ -313,7 +339,6 @@ margin-top:-15px;
   }
 }
 
-
 @media (max-width: 767px) {
   .order-h2 {
     font-size: 18px;
@@ -324,6 +349,8 @@ margin-top:-15px;
   .order-h2 {
     font-size: 20px;
   }
+
+
 }
 
 @media (min-width: 1200px) {

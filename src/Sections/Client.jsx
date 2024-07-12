@@ -19,7 +19,7 @@ import magnani from "../assets/Magnanni.jpg";
 import hotel from "../assets/Four-Seasons.jpg";
 import capitalIq from "../assets/capital-iq.jpg";
 import tommyH from "../assets/Tommy-Hilfiger.jpg";
-import redHanger from "../assets/red hanger.jpg";
+import redHanger from "../assets/red-hanger.jpg";
 import kpmg from "../assets/KPMG.jpg";
 import hyatt from "../assets/Hyatt.jpg";
 import savills from "../assets/Savills-Studley.jpg";
@@ -31,7 +31,7 @@ import knightHotel from "../assets/Knickerbocker-Hotel.jpg";
 import malofus from "../assets/maloufs-1.jpg";
 import archerCapital from "../assets/Archer-Capital.jpg";
 import perry from "../assets/perry-ellis.jpg";
-import dependableCleaner from "../assets/Dependable-Cleaners-1.jpg";
+import dependableCleaner from "../assets/Dependable.jpg";
 
 function Client() {
   const [selectedCategory, setSelectedCategory] = useState("ALL");
@@ -58,7 +58,7 @@ function Client() {
     { id: 17, src: kpmg, category: "Business" },
     { id: 18, src: robert, category: "Business" },
     { id: 19, src: tommyH, category: "Fashion" },
-    { id: 20, src: magnani, category: "Fashion" },   
+    { id: 20, src: magnani, category: "Fashion" },
     { id: 21, src: mfs, category: "Business" },
     { id: 22, src: attractive, category: "Business" },
     { id: 23, src: redwood, category: "Business" },
@@ -84,16 +84,16 @@ function Client() {
       return { z: -100, y: 100 };
     } else if (category === "Business" || category === "ALL") {
       const directions = [
-        { x: 100, y: 0 },  
-        { x: -100, y: 0 }, 
-        { x: 0, y: 100 },  
-        { x: 0, y: -100 } 
+        { x: 100, y: 0 },
+        { x: -100, y: 0 },
+        { x: 0, y: 100 },
+        { x: 0, y: -100 }
       ];
       return directions[Math.floor(Math.random() * directions.length)];
     } else if (category === "Hotel") {
-      return { x: -100, y: 0 }; 
+      return { x: -100, y: 0 };
     }
-    
+
     return { x: 0, y: 0 };
   };
 
@@ -114,23 +114,23 @@ function Client() {
       <h1 className="h1-client">Works</h1>
       <h1 className="h1-our-client">Our Clients</h1>
       <div className="button-client-container">
-        <ul>
-          <li className={`hover:bg-[#0066FF] font-semibold font-sans p-2 hover:text-white ${selectedCategory === "ALL" && "bg-[#0066FF] text-white"}`}>
-            <button onClick={() => handleCategoryChange("ALL")}>ALL</button>
-          </li>
-          <li className={`hover:bg-[#0066FF] font-semibold font-sans p-2 hover:text-white ${selectedCategory === "Business" && "bg-[#0066FF] text-white"}`}>
-            <button onClick={() => handleCategoryChange("Business")}>Business</button>
-          </li>
-          <li className={`hover:bg-[#0066FF] font-semibold font-sans p-2 hover:text-white ${selectedCategory === "Dry Cleaners" && "bg-[#0066FF] text-white"}`}>
-            <button onClick={() => handleCategoryChange("Dry Cleaners")}>Dry Cleaners</button>
-          </li>
-          <li className={`hover:bg-[#0066FF] font-semibold font-sans p-2 hover:text-white ${selectedCategory === "Fashion" && "bg-[#0066FF] text-white"}`}>
-            <button onClick={() => handleCategoryChange("Fashion")}>Fashion</button>
-          </li>
-          <li className={`hover:bg-[#0066FF] font-semibold font-sans p-2 hover:text-white ${selectedCategory === "Hotel" && "bg-[#0066FF] text-white"}`}>
-            <button onClick={() => handleCategoryChange("Hotel")}>Hotel</button>
-          </li>
-        </ul>
+      <ul>
+      <li className={`category-item ${selectedCategory === "ALL" ? "category-item-selected" : ""}`}>
+        <button onClick={() => handleCategoryChange("ALL")}>ALL</button>
+      </li>
+      <li className={`category-item ${selectedCategory === "Business" ? "category-item-selected" : ""}`}>
+        <button onClick={() => handleCategoryChange("Business")}>Business</button>
+      </li>
+      <li className={`category-item ${selectedCategory === "Dry Cleaners" ? "category-item-selected" : ""}`}>
+        <button onClick={() => handleCategoryChange("Dry Cleaners")}>Dry Cleaners</button>
+      </li>
+      <li className={`category-item ${selectedCategory === "Fashion" ? "category-item-selected" : ""}`}>
+        <button onClick={() => handleCategoryChange("Fashion")}>Fashion</button>
+      </li>
+      <li className={`category-item ${selectedCategory === "Hotel" ? "category-item-selected" : ""}`}>
+        <button onClick={() => handleCategoryChange("Hotel")}>Hotel</button>
+      </li>
+    </ul>
       </div>
       <div className="client-img-container about-container mt-10 overflow-hidden justify-start">
         <SectionTracker sectionId="client1" onInViewChange={handleInViewChange1} />

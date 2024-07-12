@@ -96,9 +96,9 @@ function About() {
           <div className="ordering-card">
             <img src={artwork} alt="" />
             <p className="text-lg">
-              Send us your high-resolution <br /> artwork for the front of your <br />
-              CollarCard and the text you <br /> would like printed on the back <br /> of each
-              collar stay on your <br /> CollarCard (email, website, <br /> and/or phone
+              Send us your high-resolution artwork for the front of your 
+              CollarCard and the text you  would like printed on the back of each
+              collar stay on your  CollarCard (email, website,  and/or phone
               number.)
             </p>
           </div>
@@ -106,17 +106,17 @@ function About() {
           <div className="ordering-card">
             <img src={email} alt="" />
             <p className="text-lg">
-              We will promptly create proofs <br /> and email them to you for
-              your <br /> approval.
+              We will promptly create proofs  and email them to you for
+              your  approval.
             </p>
           </div>
 
           <div className="ordering-card">
             <img src={card} alt="" />
             <p className="text-lg">
-              Once you approve and send <br /> payment, we will start to <br /> produce your
-              order. Our typical <br /> turnaround time is very fast– <br /> usually only two
-              weeks from <br /> the date of your order.
+              Once you approve and send payment, we will start to  produce your
+              order. Our typical turnaround time is very fast– usually only two
+              weeks from  the date of your order.
             </p>
           </div>
         </div>

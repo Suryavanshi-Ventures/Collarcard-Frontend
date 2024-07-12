@@ -123,17 +123,18 @@ const Slider = ({ testimonials }) => {
             className="flex rounded-[10px] p-[10px] lg:p-[20px] justify-between bg-[#0066FF] flex-col mb-[15px] border border-[#0066FF] h-[85%]"
             key={index}
           >
-            <div className="testimonial-text-container relative bg-white text-[#0066FF] p-[10px] rounded-[10px] before:absolute before:-bottom-3 before:left-5 before:border-t-[15px] before:border-t-white before:border-x-[10px] before:border-x-transparent">
-              <p>{data.text}</p>
-            </div>
-            <div className="testimonial-info-container mt-4">
-              <div className="testimonial-name-container text-white font-bold">
-                <p>{data.name}</p>
-              </div>
-              <div className="testimonial-position-container text-white">
-                <p>{data.position}</p>
-              </div>
-            </div>
+          <div className="testimonial-text-container relative bg-white text-[#0066FF] p-[10px] rounded-[10px] before:absolute before:-bottom-3 before:left-5 before:border-t-[15px] before:border-t-white before:border-x-[10px] before:border-x-transparent md:text-[18px] lg:text-[18px]">
+  <p>{data.text}</p>
+</div>
+<div className="testimonial-info-container mt-4">
+  <div className="testimonial-name-container text-white font-bold md:text-[18px] lg:text-[18px]">
+    <p>{data.name}</p>
+  </div>
+  <div className="testimonial-position-container text-white md:text-[18px] lg:text-[18px]">
+    <p>{data.position}</p>
+  </div>
+</div>
+
           </SwiperSlide>
         ))}
       </Swiper>

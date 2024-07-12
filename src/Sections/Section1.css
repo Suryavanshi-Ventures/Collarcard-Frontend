@@ -2,7 +2,7 @@
 .h1-collar {
   color: #0000000A;
   font-family: "Open Sans", Sans-serif;
-  font-size: 58px;
+  font-size: 69px;
   font-weight: 600;
   text-align: center;
 }
@@ -10,8 +10,8 @@
 .h2-collar {
   color: #0066FF;
   font-family: "Open Sans", Sans-serif;
-  font-size: 56px;
-  font-weight: lighter;
+  font-size: 55px;
+  font-weight: bold;
   letter-spacing: 0.5px;
   text-align: center;
   margin-top: -50px;
@@ -51,13 +51,56 @@
   fill: #fff;
 }
 
+/* .arrow {
+  text-align: center;
+  margin-top: 22px;
+  cursor: pointer;
+  padding: 5px;
+} */
+
+/* .arrow {
+  text-align: center;
+  margin-top: 22px;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.3s ease-out, color 0.3s ease-out;
+}
+
+.arrow:hover {
+  color: #0066ff;
+  transform: translateY(-3px);
+}
+
+@keyframes arrow-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.arrow:hover {
+  animation: arrow-bounce 0.6s ease;
+} */
+
+
+
 .arrow {
   text-align: center;
   margin-top: 22px;
   cursor: pointer;
   padding: 5px;
+  color: black;
+  transition: transform 0.3s  ease-in-out;
 }
 
+.arrow:hover {
+  transform: scale(1.2) translateY(-5px); 
+}
 
 @media (max-width: 1200px) {
   .h1-collar {
