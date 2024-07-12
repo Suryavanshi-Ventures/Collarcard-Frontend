@@ -110,68 +110,95 @@ function Client() {
   };
 
   return (
-    <div id="clients" className="mt-2">
+    <div id="clients">
       <h1 className="h1-client">Works</h1>
       <h1 className="h1-our-client">Our Clients</h1>
-      <div className="button-client-container">
-      <ul>
-      <li className={`category-item ${selectedCategory === "ALL" ? "category-item-selected" : ""}`}>
-        <button onClick={() => handleCategoryChange("ALL")}>ALL</button>
-      </li>
-      <li className={`category-item ${selectedCategory === "Business" ? "category-item-selected" : ""}`}>
-        <button onClick={() => handleCategoryChange("Business")}>Business</button>
-      </li>
-      <li className={`category-item ${selectedCategory === "Dry Cleaners" ? "category-item-selected" : ""}`}>
-        <button onClick={() => handleCategoryChange("Dry Cleaners")}>Dry Cleaners</button>
-      </li>
-      <li className={`category-item ${selectedCategory === "Fashion" ? "category-item-selected" : ""}`}>
-        <button onClick={() => handleCategoryChange("Fashion")}>Fashion</button>
-      </li>
-      <li className={`category-item ${selectedCategory === "Hotel" ? "category-item-selected" : ""}`}>
-        <button onClick={() => handleCategoryChange("Hotel")}>Hotel</button>
-      </li>
-    </ul>
+      <div className="border-none gap-5 flex text-[16px] justify-center items-center">
+        <ul className="flex gap-3">
+          <li className={`hover:bg-[#0066FF] font-semibold font-sans p-2 hover:text-white ${selectedCategory == "ALL" && "bg-[#0066FF] text-white "}`}>
+            <button className="border-none cursor-pointer" onClick={() => handleCategoryChange("ALL")}>ALL</button>
+          </li>
+          <li className={`hover:bg-[#0066FF] font-semibold font-sans p-2 hover:text-white ${selectedCategory == "Business" && "bg-[#0066FF] text-white "}`}>
+            <button className="border-none cursor-pointer" onClick={() => handleCategoryChange("Business")}>Business</button>
+          </li>
+          <li className={`hover:bg-[#0066FF] font-semibold font-sans  p-2 hover:text-white ${selectedCategory == "Dry Cleaners" && "bg-[#0066FF] text-white "}`}>
+            <button className="border-none cursor-pointer" onClick={() => handleCategoryChange("Dry Cleaners")}>Dry Cleaners</button>
+          </li>
+          <li className={`hover:bg-[#0066FF]  font-semibold font-sans p-2 hover:text-white ${selectedCategory == "Fashion" && "bg-[#0066FF] text-white "}`}>
+            <button className="border-none cursor-pointer" onClick={() => handleCategoryChange("Fashion")}>Fashion</button>
+          </li>
+          <li className={`hover:bg-[#0066FF] font-semibold font-sans p-2 hover:text-white ${selectedCategory == "Hotel" && "bg-[#0066FF] text-white "}`}>
+            <button className="border-none cursor-pointer" onClick={() => handleCategoryChange("Hotel")}>Hotel</button>
+          </li>
+        </ul>
       </div>
-      <div className="client-img-container about-container mt-10 overflow-hidden justify-start">
-        <SectionTracker sectionId="client1" onInViewChange={handleInViewChange1} />
+      <div className="client-img-container  about-container mt-10 overflow-hidden justify-start">
+        <SectionTracker
+          sectionId="client1"
+          onInViewChange={handleInViewChange1}
+        />
         <AnimatePresence>
-          {filteredClients.map((client, index) => {
+          {filteredClients.slice(0, 12).map((client, index) => {
             const direction = getRandomDirection(selectedCategory);
+            return (
+              <motion.div
+                key={`${client.src}-${selectedCategory}-${index}`} // Ensure unique key based on category
+                initial={{ scale: 0 }}
+                animate={isSectionInView && { scale: 1 }}
+                transition={isSectionInView && { duration: 0.5, ease: "easeInOut" }}
+              >
+                <motion.img
+                  src={client.src}
+                  alt=""
+                  initial={{ opacity: 0, ...direction }}
+                  animate={{ opacity: 1, x: 0, y: 0 }}
+                  exit={{ opacity: 0, ...direction }}
+                  transition={{ duration: 0.5 }}
+                />
+              </motion.div>
+            );
+          })}
+          <SectionTracker sectionId="client" onInViewChange={handleInViewChange} />
+          {filteredClients.slice(12).map((client, index) => {
+            const direction = getRandomDirection(selectedCategory);
+            const shouldAnimateFromBottom = isSection01InView === true; // Replace with your actual condition
 
             const initialAnimation = {
               opacity: 0,
               ...direction,
-              scale: 0,
+              ...(shouldAnimateFromBottom ? { y: 100 } : {}), // Initial position off-screen bottom if condition is true
             };
 
             const animateAnimation = {
               opacity: 1,
               x: 0,
               y: 0,
-              scale: 1,
             };
 
             const exitAnimation = {
               opacity: 0,
               ...direction,
-              scale: 0,
             };
 
             return (
               <motion.div
-                key={`${client.src}-${selectedCategory}-${index}`}
-                initial={initialAnimation}
-                animate={animateAnimation}
-                exit={exitAnimation}
-                transition={{ duration: 0.5 }}
-                className="client-image-container"
+                key={`${client.src}-${selectedCategory}-${index + 12}`} // Ensure unique key based on category
+                initial={{ scale: 0 }}
+                animate={isSection01InView && { scale: 1 }}
+                transition={isSection01InView && { duration: 1, ease: "easeInOut" }}
               >
-                <img src={client.src} alt="" className="client-image" />
+                <motion.img
+                  src={client.src}
+                  alt=""
+                  initial={initialAnimation}
+                  animate={animateAnimation}
+                  exit={exitAnimation}
+                  transition={{ duration: 0.5 }}
+                />
               </motion.div>
             );
           })}
         </AnimatePresence>
-        <SectionTracker sectionId="client" onInViewChange={handleInViewChange} />
       </div>
     </div>
   );
