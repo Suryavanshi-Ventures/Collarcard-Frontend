@@ -12,12 +12,12 @@ function Video() {
   }, []);
 
   return (
-    <>
-      <video className="video-bar" controls muted ref={videoRef} autoPlay>
+    <div className="w-full flex justify-center items-center ">
+      <video className="w-full mt-5" controls muted ref={videoRef} autoPlay>
         <source src={video} type="video/mp4" />
-        Some Error
+        
       </video>
-    </>
+    </div>
   );
 }
 

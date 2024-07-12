@@ -1,9 +1,5 @@
 .video-bar {
-  width: 100vw; /* Use viewport width */
-  height: auto;
-  
-  display: block;
-  margin: 0 auto;
+
   border-radius: 10px;
   margin-top: 60px;
   overflow-x: hidden; 
@@ -11,18 +7,18 @@
 
 @media only screen and (max-width: 600px) {
   .video-bar {
-    width: 100vw; 
+   
   }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 900px) {
   .video-bar {
-    width: 80vw; 
+  
   }
 }
 
 @media only screen and (min-width: 901px) {
   .video-bar {
-    width: 70vw; 
+    
   }
 }

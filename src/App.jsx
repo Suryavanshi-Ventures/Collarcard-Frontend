@@ -17,11 +17,14 @@ function App() {
   return (
     <Router>
       <>
-   
+   <MainContainer>
+   <Navbar />
+
+   </MainContainer>
 
       <MainContainer >
-      <Navbar />
-      <Routes>
+        <div className="px-2 md:px-0">
+        <Routes>
           <Route path="/" element={<Section1 />} />
           <Route path="/about" element={<About />} />
           <Route path="/clients" element={<Client />} />
@@ -30,6 +33,9 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       <About/>
+        </div>
+    
+     
       </MainContainer>
       <BGContainer>
 

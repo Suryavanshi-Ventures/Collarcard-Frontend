@@ -11,6 +11,9 @@ function Compare() {
         <div className="right-compare">
      <h2>Compare</h2>
      <h1>Usage Rates</h1>
+
+
+     
      <span> Collar Cards
       <div className="progress"></div>
      </span>

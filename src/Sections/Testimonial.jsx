@@ -10,6 +10,7 @@ import { Autoplay, EffectCreative, Navigation, Pagination } from "swiper/modules
 import "swiper/css";
 import "swiper/css/effect-creative";
 import "swiper/css/pagination"
+import Heading from "../component/Heading/Heading";
 
 const settings = {
   dots: true,
@@ -52,10 +53,10 @@ function Testimonial() {
           <div className="absolute w-[104%] h-[80%] bg-gray-100 transform -rotate-2  bottom-[50px] -left-2 flex justify-center items-center">
             <div className='about-container w-full h-[80%] rotate-[1.5deg]'>
               <div className=' h-[90%]'>
-                <div className="testimonials">
-                  <h1 className="testimonial-h1">What Client Say</h1>
-                  <h1 className="testimonial-h1-h1">Testimonials</h1>
-                </div>
+                
+
+                <Heading subTitle={"What Client Say"} title ={"Testimonials"}/>
+
                 <Slider testimonials={testimonials} />
               </div>
             </div>

@@ -4,17 +4,15 @@ import artwork from "../assets/artwork.png";
 import email from "../assets/email.png";
 import card from "../assets/card.png";
 import back from "../assets/back.png"
+import Heading from "../component/Heading/Heading";
 
 function About() {
   return (
     < >
     <div id="about">
       <div className="about-container mt-10">
-        <div className="">
-          <h2 className="head-h2  ">Know who we are</h2>
-          <h1 className="head-h1 ">CollarCard</h1>
-        </div>
-
+      
+<Heading subTitle={"Know who we are"} title ={"CollarCard"}  />
         <div className="para-about mt-6">
           <p className ="text-lg">
             A CollarCard is a credit card sized plastic card that contains four

@@ -32,6 +32,7 @@ import malofus from "../assets/maloufs-1.jpg";
 import archerCapital from "../assets/Archer-Capital.jpg";
 import perry from "../assets/perry-ellis.jpg";
 import dependableCleaner from "../assets/Dependable.jpg";
+import Heading from "../component/Heading/Heading";
 
 function Client() {
   const [selectedCategory, setSelectedCategory] = useState("ALL");
@@ -111,8 +112,11 @@ function Client() {
 
   return (
     <div id="clients">
-      <h1 className="h1-client">Works</h1>
-      <h1 className="h1-our-client">Our Clients</h1>
+      {/* <h1 className="h1-client">Works</h1>
+      <h1 className="h1-our-client">Our Clients</h1> */}
+      <Heading subTitle={"Works"} title ={"Our Client"}/>
+
+   
       <div className="border-none gap-5 flex text-[16px] justify-center items-center">
         <ul className="flex gap-3">
           <li className={`hover:bg-[#0066FF] font-semibold font-sans p-2 hover:text-white ${selectedCategory == "ALL" && "bg-[#0066FF] text-white "}`}>

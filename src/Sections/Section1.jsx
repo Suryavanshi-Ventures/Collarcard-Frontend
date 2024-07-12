@@ -1,6 +1,7 @@
 import React from "react";
 import "./Section1.css";
 import Video from "../component/Video";
+import Heading from "../component/Heading/Heading";
 
 function Section1() {
   const scrollToAbout = () => {
@@ -11,13 +12,17 @@ function Section1() {
   };
   return (
     <div id="home">
+       <Video />
       <div className="container">
-        <Video />
+       
 
-        <div className="collar-card-container">
+        {/* <div className="collar-card-container">
           <h2 className="h1-collar">collarcard</h2>
           <h2 className="h2-collar">CollarCard</h2>
-        </div>
+        </div> */}
+<Heading subTitle={"collarcard"} title ={"CollarCard"}/>
+
+
 
         <div className="collar-card-p">
           <p className="text-lg">
