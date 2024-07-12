@@ -202,7 +202,7 @@ li {
   }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+@media only screen and (min-width: 900px) and (max-width: 1440px) {
   .para-about {
     font-size: 28px;
     margin-top: -25px;
@@ -214,28 +214,11 @@ li {
   }
   .ordering-card-container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
-    align-items: center;
-    height: 200px;
   }
-  
-  .ordering-card {
-    background-color: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    outline: none;
-    padding: 10px;
-    text-align: center;
-    flex: 1 1 300px;
-    max-width: 100%;
-    margin-top: 20px;
-  }
-  
-  
 }
 @media (max-width: 576px) {
   .head-h1 {
@@ -357,4 +340,22 @@ li {
   .order-h2 {
     font-size: 22px;
   }
+}
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .ordering-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+
+  }
+
+  .ordering-card {
+    max-width: 100%;
+  }
+
+     .ordering-card img {
+        width: 100px;
+        top: -50px;
+    }
 }

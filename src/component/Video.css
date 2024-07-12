@@ -26,8 +26,3 @@
     width: 70vw; 
   }
 }
-@media only screen and (min-width: 601px) and (max-width: 900px) {
-  .video-bar {
-    width: 80vw; 
-  }
-}
