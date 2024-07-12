@@ -16,17 +16,6 @@
   margin-top: -40px;
 }
 
-.button-client-container button {
-  color: #000000;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  font-family: "Open Sans", Sans-serif;
-  font-size: 16px;
-  font-weight:lighter;
-  letter-spacing: 0.5px;
-  padding: 10px 15px;
-}
 
 .button-client-container ul {
   display: flex;
