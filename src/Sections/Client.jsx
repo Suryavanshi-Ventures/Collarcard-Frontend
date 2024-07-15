@@ -101,7 +101,9 @@ function Client() {
 
   const handleInViewChange = (sectionId, inView) => {
     if (sectionId === "client") {
-      setIsSection01InView(inView);
+      setTimeout(() => {
+        setIsSection01InView(inView);
+      }, 1500);
     }
   };
 
@@ -111,18 +113,10 @@ function Client() {
     }
   };
 
-  useEffect(() => {
-    if (isSectionInView) {
-      setTimeout(() => {
-        setVisible(false)
-      }, 500);
-    }
-  }, [isSectionInView])
-
   return (
     <div id="clients">
-     
-      <Heading subTitle={"Works"} title ={"Our Client"}/>
+
+      <Heading subTitle={"Works"} title={"Our Client"} />
 
       <div className="border-none gap-5 flex text-[16px] justify-center items-center">
         <ul className="flex gap-3">
@@ -148,6 +142,7 @@ function Client() {
         sectionId="client1"
         onInViewChange={handleInViewChange1}
       />
+      <SectionTracker sectionId="client" onInViewChange={handleInViewChange} />
       <div className="client-img-container  about-container mt-10 overflow-hidden justify-start">
         <AnimatePresence>
           {filteredClients.slice(0, 12).map((itm, index) => {
@@ -170,7 +165,6 @@ function Client() {
               </motion.div>
             );
           })}
-          {visible && <SectionTracker sectionId="client" onInViewChange={handleInViewChange} />}
           {filteredClients.slice(12).map((item, index) => {
             const direction = getRandomDirection(selectedCategory);
             const shouldAnimateFromBottom = isSection01InView === true; // Replace with your actual condition
