@@ -1,7 +1,7 @@
 .h1-trademark {
   color: #0000000A;
   font-family: "Open Sans", sans-serif;
-  font-size: 42px; /* Default font size for smaller screens */
+  font-size: 69px; 
   font-weight: 600;
   text-align: start;
 }
@@ -9,43 +9,43 @@
 .h1-patent {
   color: #0066FF;
   font-family: "Open Sans", sans-serif;
-  font-size: 55px; /* Default font size for smaller screens */
-  font-weight: bold;
+  font-size: 55px; 
+  font-weight:600;
   letter-spacing: 0.5px;
   text-align: start;
-  margin-top: -35px; /* Default margin adjustment */
+  margin-top: -35px;
 }
 
 @media (max-width: 767px) {
   .h1-trademark {
-    font-size: 18px; /* Adjust font size for mobile devices */
+    font-size: 18px; 
     font-weight: 600;
   }
 
   .h1-patent {
-    font-size: 30px; /* Adjust font size for mobile devices */
-    margin-top: -25px; /* Adjust margin for mobile devices */
+    font-size: 30px; 
+    margin-top: -25px; 
   }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .h1-trademark {
-    font-size: 30px; /* Adjust font size for tablets */
+    font-size: 30px; 
   }
 
   .h1-patent {
-    font-size: 41px; /* Adjust font size for tablets */
-    margin-top: -25px; /* Adjust margin for tablets */
+    font-size: 41px; 
+    margin-top: -25px; 
   }
 }
 
 @media (min-width: 1200px) {
   .h1-trademark {
-    font-size: 42px; /* Default font size for larger screens */
+    font-size: 42px; 
   }
 
   .h1-patent {
-    font-size: 55px; /* Default font size for larger screens */
-    margin-top: -35px; /* Default margin adjustment for larger screens */
+    font-size: 55px; 
+    margin-top: -35px; 
   }
 }
