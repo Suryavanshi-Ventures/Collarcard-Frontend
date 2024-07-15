@@ -17,7 +17,7 @@ const UsesRate = () => {
 
 
     return (
-        <div className="App mt-10 h-[780px] md:pr-2 lg:pr-0 md:h-[604px] overflow-hidden">
+        <div className=" mt-5 md:mt-10 lg:mt-16 h-[780px] w-full md:w-[90%] lg:w-full m-auto md:pr-2 lg:pr-0 md:h-[504px] overflow-hidden">
             <SectionTracker
                 sectionId="usesRate"
                 onInViewChange={handleInViewChange}
@@ -25,7 +25,7 @@ const UsesRate = () => {
             {/* <div className="relative h-full  w-full">
                 <div className="absolute w-[104%] h-[80%] bg-gray-100 transform -rotate-2  bottom-[50px] -left-2 flex justify-center items-center">
                     <div className='about-container w-full h-[80%] rotate-[1.5deg]'> */}
-            <div className=' h-[90%] flex  flex-col md:flex-row justify-between'>
+            <div className=' h-[70%] md:h-[90%] flex  flex-col md:flex-row justify-between'>
                 <div className='w-full h-[280px] md:w-[50%] lg:w-[43%]'>
                     <CompairImage />
                 </div>

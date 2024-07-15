@@ -4,7 +4,7 @@ import Heading from '../component/Heading/Heading'
 
 function Contact() {
   return (
-    <div className='contact'>
+    <div id='contact' className='contact'>
     <div className="contact-us">
        
         <Heading subTitle={"Get in touch"} title ={"Contact us"}/>
@@ -14,7 +14,7 @@ function Contact() {
 
         <p>Please fill out our form, call us, or email us – <br />
         and we will get back to you as soon as we can.</p>
-        <span><p className='num'>(310) 472-5476 | sales@collarcard.com</p></span>
+        <span><p className='num'> (310) 472-7600 | sales@collarcard.com</p></span>
 
         <div className="input-container">
             <input type="text" placeholder='Name' />

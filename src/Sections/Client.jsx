@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Client.css";
 import { motion, AnimatePresence } from 'framer-motion';
 import SectionTracker from "../component/sectionTracker/SectionTracker";
@@ -38,6 +38,7 @@ function Client() {
   const [selectedCategory, setSelectedCategory] = useState("ALL");
   const [isSection01InView, setIsSection01InView] = useState(false);
   const [isSectionInView, setIsSectionInView] = useState(false);
+  const [visible, setVisible] = useState(true)
 
   const clients = [
     { id: 1, src: resoniance, category: "Hotel" },
@@ -110,12 +111,19 @@ function Client() {
     }
   };
 
+  useEffect(() => {
+    if (isSectionInView) {
+      setTimeout(() => {
+        setVisible(false)
+      }, 500);
+    }
+  }, [isSectionInView])
+
   return (
     <div id="clients">
      
       <Heading subTitle={"Works"} title ={"Our Client"}/>
 
-   
       <div className="border-none gap-5 flex text-[16px] justify-center items-center">
         <ul className="flex gap-3">
           <li className={`hover:bg-[#0066FF] font-semibold font-sans p-2 hover:text-white ${selectedCategory == "ALL" && "bg-[#0066FF] text-white "}`}>
@@ -135,23 +143,24 @@ function Client() {
           </li>
         </ul>
       </div>
+      <SectionTracker
+        className="hidden"
+        sectionId="client1"
+        onInViewChange={handleInViewChange1}
+      />
       <div className="client-img-container  about-container mt-10 overflow-hidden justify-start">
-        <SectionTracker
-          sectionId="client1"
-          onInViewChange={handleInViewChange1}
-        />
         <AnimatePresence>
-          {filteredClients.slice(0, 12).map((client, index) => {
+          {filteredClients.slice(0, 12).map((itm, index) => {
             const direction = getRandomDirection(selectedCategory);
             return (
               <motion.div
-                key={`${client.src}-${selectedCategory}-${index}`} // Ensure unique key based on category
+                key={`${itm.src}-${selectedCategory}-${index}`} // Ensure unique key based on category
                 initial={{ scale: 0 }}
                 animate={isSectionInView && { scale: 1 }}
-                transition={isSectionInView && { duration: 0.5, ease: "easeInOut" }}
+                transition={(isSectionInView && selectedCategory == "ALL") && { duration: 0.5, ease: "easeInOut" }}
               >
                 <motion.img
-                  src={client.src}
+                  src={itm.src}
                   alt=""
                   initial={{ opacity: 0, ...direction }}
                   animate={{ opacity: 1, x: 0, y: 0 }}
@@ -161,8 +170,8 @@ function Client() {
               </motion.div>
             );
           })}
-          <SectionTracker sectionId="client" onInViewChange={handleInViewChange} />
-          {filteredClients.slice(12).map((client, index) => {
+          {visible && <SectionTracker sectionId="client" onInViewChange={handleInViewChange} />}
+          {filteredClients.slice(12).map((item, index) => {
             const direction = getRandomDirection(selectedCategory);
             const shouldAnimateFromBottom = isSection01InView === true; // Replace with your actual condition
 
@@ -185,13 +194,13 @@ function Client() {
 
             return (
               <motion.div
-                key={`${client.src}-${selectedCategory}-${index + 12}`} // Ensure unique key based on category
+                key={`${item.src}-${selectedCategory}-${index + 12}`} // Ensure unique key based on category
                 initial={{ scale: 0 }}
                 animate={isSection01InView && { scale: 1 }}
-                transition={isSection01InView && { duration: 1, ease: "easeInOut" }}
+                transition={(isSectionInView && selectedCategory == "ALL") && { duration: 1, ease: "easeInOut" }}
               >
                 <motion.img
-                  src={client.src}
+                  src={item.src}
                   alt=""
                   initial={initialAnimation}
                   animate={animateAnimation}

@@ -10,7 +10,7 @@ const SectionTracker = ({ onInViewChange, sectionId }) => {
     onInViewChange(sectionId, inView);
   }, [inView, onInViewChange, sectionId]);
 
-  return <div ref={ref} id={sectionId}></div>;
+  return <div  ref={ref} id={sectionId}></div>;
 };
 
 export default SectionTracker;

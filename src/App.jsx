@@ -17,51 +17,52 @@ function App() {
   return (
     <Router>
       <>
-   <MainContainer>
-   <Navbar />
+        <MainContainer>
+          <Navbar />
 
-   </MainContainer>
+        </MainContainer>
 
-      <MainContainer >
-        <div className="px-2 md:px-0">
-        <Routes>
-          <Route path="/" element={<Section1 />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/clients" element={<Client />} />
-          <Route path="/patents" element={<Patent />} />
-          <Route path="/faq" element={<FAQComponent />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      <About/>
-        </div>
-    
-     
-      </MainContainer>
-      <BGContainer>
+        <MainContainer >
+          <div className="px-2 md:px-0">
+            <Routes>
+              <Route path="/" element={<Section1 />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/clients" element={<Client />} />
+              <Route path="/patents" element={<Patent />} />
+              <Route path="/faq" element={<FAQComponent />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+            <About />
+          </div>
 
-      <UsesRate/>
-      </BGContainer>
-      <MainContainer>
 
-      <Patent/>
-      <FAQComponent/>
-            
-      <Client/>
-      </MainContainer>
-    
-      <Testimonial />
-      <MainContainer>
-      <Contact/>
-      <CollarCard />
-      
-      </MainContainer>
-  
+        </MainContainer>
+        <BGContainer>
+          <div className="px-5 md:px-0">
+            <UsesRate />
+          </div>
+        </BGContainer>
+        <MainContainer>
 
-    
-     
-       
-      <Footer />
-       
+          <Patent />
+          <FAQComponent />
+
+          <Client />
+        </MainContainer>
+
+        <Testimonial />
+        <MainContainer>
+          <Contact />
+          <CollarCard />
+
+        </MainContainer>
+
+
+
+
+
+        <Footer />
+
 
 
       </>
