@@ -5,17 +5,17 @@ import Heading from "../component/Heading/Heading";
 function Patent() {
   return (
     <div className="about-container patents p-4 md:p-8">
-      <div className="patent-card-div">
+      {/* <div className="patent-card-div">
         <h1 className="h1-trademark">Trademarks & Copywrites</h1>
         <h1 className="h1-patent">Patents</h1>
-      </div>
+      </div> */}
 
-      {/* <Heading subTitle= {"Trademarks & Copywrites"} title={"Patents"} /> */}
+      <Heading style="text-start  "  subTitle= {"Trademarks & Copywrites"} title={"Patents"} />
 
       
 
 
-      <div className="patent-card flex flex-col md:flex-row justify-between">
+      <div className="patent-card flex flex-col md:flex-row justify-between ">
         <div className="left-card md:w-[45%] mb-4 md:mb-0">
           <p className="text-base md:text-lg">
             We take our intellectual property rights seriously, and have
