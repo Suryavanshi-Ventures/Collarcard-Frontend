@@ -1,5 +1,6 @@
 import React from "react";
 import "./Patent.css";
+import Heading from "../component/Heading/Heading";
 
 function Patent() {
   return (
@@ -8,6 +9,8 @@ function Patent() {
         <h1 className="h1-trademark">Trademarks & Copywrites</h1>
         <h1 className="h1-patent">Patents</h1>
       </div>
+
+      {/* <Heading subTitle= {"Trademarks & Copywrites"} title={"Patents"} /> */}
 
       
 

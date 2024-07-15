@@ -5,6 +5,13 @@ import Heading from "../component/Heading/Heading";
 
 function Section1() {
   const scrollToAbout = () => {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToContact = () => {
     const aboutSection = document.getElementById("contact");
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: "smooth" });
@@ -20,7 +27,7 @@ function Section1() {
           <h2 className="h1-collar">collarcard</h2>
           <h2 className="h2-collar">CollarCard</h2>
         </div> */}
-        <Heading subTitle={"collarcard"} title={"CollarCard"} />
+        <Heading  subTitle={"collarcard"} title={"CollarCard"} />
 
 
 
@@ -32,7 +39,7 @@ function Section1() {
         </div>
 
         <div className="collar-card-btn">
-          <button onClick={scrollToAbout} className="btn">Request A Quote</button>
+          <button onClick={scrollToContact} className="btn">Request A Quote</button>
         </div>
 
         <div className="arrow" onClick={scrollToAbout}>
