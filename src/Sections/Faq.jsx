@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./FAQComponent.css";
 import { motion } from "framer-motion";
+import Heading from "../component/Heading/Heading";
 
 const FAQComponent = () => {
   const [expandedQuestions, setExpandedQuestions] = useState({});
@@ -151,8 +152,13 @@ const FAQComponent = () => {
 
   return (
     <div className="faq-container faq">
-      <h1 className="faqs-h1">FAQs</h1>
-      <h1 className="faq-h1">Frequently Asked Questions</h1>
+      
+    
+
+      <Heading subTitle={"FAQs"} title ={"Frequently Asked Questions"}/>
+
+
+
       <div className="flex flex-col lg:flex-row justify-between mt-5">
         <div className="w-full lg:w-[49%]">
           <RenderQuestion faqs={questionsLeft} />

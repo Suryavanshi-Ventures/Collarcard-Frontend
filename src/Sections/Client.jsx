@@ -112,8 +112,7 @@ function Client() {
 
   return (
     <div id="clients">
-      {/* <h1 className="h1-client">Works</h1>
-      <h1 className="h1-our-client">Our Clients</h1> */}
+     
       <Heading subTitle={"Works"} title ={"Our Client"}/>
 
    

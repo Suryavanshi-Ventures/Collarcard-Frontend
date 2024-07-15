@@ -9,6 +9,9 @@ function Patent() {
         <h1 className="h1-patent">Patents</h1>
       </div>
 
+      
+
+
       <div className="patent-card flex flex-col md:flex-row justify-between">
         <div className="left-card md:w-[45%] mb-4 md:mb-0">
           <p className="text-base md:text-lg">

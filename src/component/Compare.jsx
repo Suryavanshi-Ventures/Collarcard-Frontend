@@ -1,5 +1,6 @@
 import React from 'react'
 import back from "../assets/back.png"
+import Heading from './Heading/Heading'
 
 function Compare() {
   return (
@@ -9,11 +10,12 @@ function Compare() {
   <img src={back} alt="" />
         </div>
         <div className="right-compare">
-     <h2>Compare</h2>
-     <h1>Usage Rates</h1>
+     <h2></h2>
+     <h1></h1>
+
+     <Heading subTitle={"Usage Rates"} title ={"Compare"}/>
 
 
-     
      <span> Collar Cards
       <div className="progress"></div>
      </span>
