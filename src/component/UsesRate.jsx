@@ -62,7 +62,7 @@ const CompairImage = () => {
 }
 const ProgressBar = ({ label, percentage, sectionView }) => {
     return (
-        <div className="mb-6">
+        <div className="mb- font-sans">
             <div className="text-[17px] font-600 mb-1">{label}</div>
             <div className="h-6 relative w-full bg-gray-200 rounded">
                 <motion.div
