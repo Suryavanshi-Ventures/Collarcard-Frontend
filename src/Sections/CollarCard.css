@@ -1,6 +1,6 @@
+/* Default styles */
 .collar-card-container {
-  
-   margin-top: 30px;
+    margin-top: 30px;
 }
 
 .collar-card-img {
@@ -35,7 +35,7 @@
 
 .menu-list {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     gap: 20px;
     padding: 0;
     margin-top: 20px;
@@ -48,9 +48,20 @@
     margin-bottom: 10px;
 }
 
+/* Responsive adjustments */
 @media (min-width: 768px) {
     .menu-list {
-        flex-wrap: nowrap; 
-        gap: 40px; 
+        gap: 40px;
+      
     }
+}
+@media (max-width: 932px) {
+    .menu-list {
+        gap: 40px;
+        display: flex;
+        flex-wrap: wrap;
+ 
+      
+    }
+  
 }

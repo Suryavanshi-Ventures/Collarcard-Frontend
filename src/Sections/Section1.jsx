@@ -38,7 +38,7 @@ function Section1() {
           </p>
         </div>
 
-        <div className="collar-card-btn">
+        <div className="collar-card-btn mt-8">
           <button onClick={scrollToContact} className="btn">Request A Quote</button>
         </div>
 

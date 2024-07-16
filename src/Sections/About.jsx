@@ -10,7 +10,7 @@ function About() {
   return (
     < >
     <div id="about">
-      <div className="about-container mt-2">
+      <div className="about-container">
       
 <Heading subTitle={"Know who we are"} title ={"CollarCard"}  />
         <div className="para-about mt-6">

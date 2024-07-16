@@ -13,8 +13,8 @@ function CollarCard() {
       <div className="phone-card">
         <ul>
           <li><i className="fa-solid fa-square-phone"></i></li>
-          <li className='li-border'> (310) 472-7600</li>
-          <li><i className="fa-solid fa-envelope-open-text"></i>&nbsp; sales@collarcard.com</li>
+          <li className='li-border'>(310)472-7600</li>
+          <li><i className="fa-solid fa-envelope-open-text"></i>sales@collarcard.com</li>
         </ul>
       </div>
 

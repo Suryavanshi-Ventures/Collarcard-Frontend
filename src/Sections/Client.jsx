@@ -146,8 +146,8 @@ function Client() {
     <div id="clients">
       <Heading subTitle={"Works"} title={"Our Client"} />
 
-      <div className="border-none gap-5 flex text-[16px] justify-center items-center">
-        <ul className="flex gap-3">
+      <div class="border-none gap-5 flex text-base md:text-lg justify-center items-center">
+        <ul className="flex gap-3 ">
           <li
             className={`hover:bg-[#0066FF] font-semibold font-sans p-2 hover:text-white ${
               selectedCategory == "ALL" && "bg-[#0066FF] text-white "

@@ -10,7 +10,7 @@ function Patent() {
         <h1 className="h1-patent">Patents</h1>
       </div> */}
 
-      <Heading style="text-start  "  subTitle= {"Trademarks & Copywrites"} title={"Patents"} />
+      <Heading style="text-start   "  subTitle= {"Trademarks & Copywrites"} title={"Patents"} />
 
       
 
