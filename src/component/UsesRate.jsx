@@ -31,7 +31,7 @@ const UsesRate = () => {
                 </div>
                 <div className='w-full  md:w-[45%] mt-0 md:mt-[-10px] lg:mt-3  '>
                     <div className='mb-3 lg:mb-10'>
-                        <h2 className='text-[#00000014] text-[36px] lg:text-[58px] mb-[-20px] lg:mb-[-45px]  font-semibold'>Compare</h2>
+                        <h2 className='text-[#00000014] text-[36px] lg:text-[50px] mb-[-20px] lg:mb-[-35px] ml-[-5px]  font-semibold'>Compare</h2>
                         <h2 className='text-[#0066FF] text-[26px] lg:text-[35px]  font-semibold'>Usage Rates</h2>
                     </div>
                     <div>
@@ -62,8 +62,8 @@ const CompairImage = () => {
 }
 const ProgressBar = ({ label, percentage, sectionView }) => {
     return (
-        <div className=" font-sans">
-            <div className="text-[17px] font-600 mb-1">{label}</div>
+        <div className="mb-2 font-sans">
+            <div className="text-[17px] font-[600] mb-1">{label}</div>
             <div className="h-6 relative w-full bg-gray-200 rounded">
                 <motion.div
                     className="h-[25px] bg-[#0066FF] rounded flex items-center justify-end"
