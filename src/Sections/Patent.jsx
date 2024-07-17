@@ -69,7 +69,7 @@ function Patent() {
         <div className="left-trademark md:w-[45%] mb-4 md:mb-0">
           <h1 className="text-xl md:text-2xl font-semibold">Trademarks:</h1>
           <p className="text-base md:text-lg">
-            CollarCard, LLC is the proud owner of the <br /> following registered
+            CollarCard, LLC is the proud owner of the following registered
             trademarks: 
           </p>
         </div>

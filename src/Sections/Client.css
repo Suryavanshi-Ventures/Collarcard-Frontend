@@ -233,7 +233,7 @@
   cursor: pointer;
 }
 
-.modal-navigation {
+/* .modal-navigation {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -243,14 +243,72 @@
 .modal-navigation button {
   padding: 10px 20px;
   font-size: 16px;
-  color: black;
+  color: white;
+ 
   border: none;
   cursor: pointer;
   background-color: transparent;
-}
+} */
 .flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.modal-content {
+  position: relative;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.modal img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.modal-navigation {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 40px); /* Adjust spacing */
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.modal-navigation button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.modal-navigation button:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+}
+
+.modal-navigation button i {
+  font-size: 20px;
 }

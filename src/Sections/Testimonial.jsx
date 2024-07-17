@@ -129,12 +129,13 @@ const Slider = ({ testimonials }) => {
 </div>
 <div className="testimonial-info-container mt-4">
   <div className="testimonial-name-container text-white font-bold md:text-[18px] lg:text-[18px]">
-    <p>{data.name}</p>
+    <p className="text-left">{data.name}</p>
   </div>
   <div className="testimonial-position-container text-white md:text-[18px] lg:text-[18px]">
-    <p>{data.position}</p>
+    <p className="text-left">{data.position}</p>
   </div>
 </div>
+
 
           </SwiperSlide>
         ))}

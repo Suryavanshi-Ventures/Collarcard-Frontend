@@ -293,7 +293,7 @@ function Client() {
         </AnimatePresence>
       </div>
 
-      {showModal && (
+      {/* {showModal && (
         <div className="modal">
           <span className="close" onClick={closeModal}>
             &times;
@@ -305,6 +305,7 @@ function Client() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3 }}
+         
             />
             <div className="modal-navigation">
               <button onClick={prevImage}><i class="fa-solid fa-angle-left "></i></button>
@@ -312,7 +313,35 @@ function Client() {
             </div>
           </div>
         </div>
-      )}
+      )} */}
+
+{showModal && (
+  <div className="modal">
+    <span className="close" onClick={closeModal}>
+      &times;
+    </span>
+    <div className="modal-content">
+      <motion.img
+        src={filteredClients[selectedImage].src}
+        alt=""
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.3 }}
+      />
+    </div>
+    <div className="modal-navigation">
+      <button className="prev-btn" onClick={prevImage}>
+        <i className="fa-solid fa-angle-left"></i>
+      </button>
+      <button className="next-btn" onClick={nextImage}>
+        <i className="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+)}
+
+
+
     </div>
   );
 }

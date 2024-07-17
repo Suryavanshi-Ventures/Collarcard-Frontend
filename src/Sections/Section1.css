@@ -3,7 +3,7 @@
   font-family: "Open Sans", sans-serif;
   font-size: 69px;
   font-weight: bold;
-
+  /* Adjusting font size for smaller screens */
 }
 
 .h2-collar {
@@ -12,8 +12,7 @@
   font-size: 55px;
   font-weight: bold;
   letter-spacing: 0.5px;
- 
-  margin-top: -50px;
+  margin-top: -50px; /* Adjusting margin for smaller screens */
 }
 
 .collar-card-p {
@@ -27,6 +26,7 @@
   align-items: center;
   margin: 0 auto;
   margin-top: 10px;
+  /* Adjusting font size and width for smaller screens */
 }
 
 .collar-card-btn {
@@ -48,6 +48,7 @@
   padding: 10px 25px;
   color: #fff;
   fill: #fff;
+  /* Adjusting padding and font size for smaller screens */
 }
 
 .arrow {
@@ -63,95 +64,100 @@
   transform: scale(1.2) translateY(-5px);
 }
 
+/* Media Queries for Responsiveness */
+
 @media (max-width: 1200px) {
   .h1-collar {
-    font-size: 48px;
+    font-size: 48px; /* Adjusting font size */
+   
   }
 
   .h2-collar {
-    font-size: 46px;
-    margin-top: -40px;
+    font-size: 46px; /* Adjusting font size */
+    margin-top: -40px; /* Adjusting margin */
+    text-align: center; /* Ensuring text alignment */
   }
 
   .collar-card-p {
-    font-size: 16px;
-    line-height: 24px;
-    width: 100%;
+    font-size: 16px; /* Adjusting font size */
+    line-height: 24px; /* Adjusting line height */
+    width: 100%; /* Adjusting width */
   }
 
   .btn {
-    font-size: 16px;
-    padding: 8px 20px;
+    font-size: 16px; /* Adjusting font size */
+    padding: 8px 20px; /* Adjusting padding */
+  }
+  .container{
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 992px) {
   .h1-collar {
-    font-size: 40px;
+    font-size: 40px; /* Adjusting font size */
   }
 
   .h2-collar {
-    font-size: 38px;
-    margin-top: -35px;
+    font-size: 38px; /* Adjusting font size */
+    margin-top: -35px; /* Adjusting margin */
   }
-
+.con
   .collar-card-p {
-    font-size: 14px;
-    line-height: 22px;
-    width: 100%;
+    font-size: 14px; /* Adjusting font size */
+    line-height: 22px; /* Adjusting line height */
+    width: 100%; /* Adjusting width */
   }
 
   .btn {
-    font-size: 14px;
-    padding: 6px 18px;
+    font-size: 14px; /* Adjusting font size */
+    padding: 6px 18px; /* Adjusting padding */
   }
 }
 
 @media (max-width: 768px) {
   .h1-collar {
-    font-size: 38px;
-    margin-top: 10px;
- 
+    font-size: 38px; /* Adjusting font size */
+    margin-top: 10px; /* Adjusting margin */
   }
 
   .h2-collar {
-    font-size: 30px;
-    margin-top: -28px;
-    
+    font-size: 30px; /* Adjusting font size */
+    margin-top: -28px; /* Adjusting margin */
   }
 
   .collar-card-p {
-    font-size: 12px;
-    line-height: 20px;
-    width: 100%;
-margin-left: 10px;
+    font-size: 12px; /* Adjusting font size */
+    line-height: 20px; /* Adjusting line height */
+    width: 100%; /* Adjusting width */
+    margin-left: 0; /* Adjusting margin */
   }
 
   .btn {
-    font-size: 12px;
-    padding: 4px 16px;
+    font-size: 12px; /* Adjusting font size */
+    padding: 4px 16px; /* Adjusting padding */
   }
 }
 
 @media (max-width: 390px) {
   .h1-collar {
-    font-size: 18px; 
-    font-weight: 600;
+    font-size: 24px; /* Adjusting font size */
+    font-weight: bold; /* Ensuring font weight */
   }
 
   .h2-collar {
-    font-size: 16px; 
-    margin-top: -20px; 
+    font-size: 20px; /* Adjusting font size */
+    margin-top: -20px; /* Adjusting margin */
   }
 
   .collar-card-p {
-    font-size: 12px; 
-    line-height: 18px; 
-    width: 100%;
+    font-size: 12px; /* Adjusting font size */
+    line-height: 18px; /* Adjusting line height */
+    width: 100%; /* Adjusting width */
   }
 
   .btn {
-    font-size: 12px; 
-    padding: 4px 12px; 
+    font-size: 12px; /* Adjusting font size */
+    padding: 4px 12px; /* Adjusting padding */
   }
 }
