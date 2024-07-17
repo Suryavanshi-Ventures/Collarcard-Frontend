@@ -17,7 +17,7 @@ const UsesRate = () => {
 
 
     return (
-        <div className=" mt-5 md:mt-10 lg:mt-16 h-[780px] w-full md:w-[90%] lg:w-full m-auto md:pr-2 lg:pr-0 md:h-[504px] overflow-hidden">
+        <div className=" xs:mt-5 md:mt-0 lg:mt-16 h-[780px] w-full md:w-[90%] lg:w-full m-auto md:pr-2 lg:pr-0 md:h-[504px] overflow-hidden">
             <SectionTracker
                 sectionId="usesRate"
                 onInViewChange={handleInViewChange}
@@ -29,7 +29,7 @@ const UsesRate = () => {
                 <div className='w-full h-[280px] md:w-[50%] lg:w-[43%]'>
                     <CompairImage />
                 </div>
-                <div className='w-full  md:w-[45%] mt-0 md:mt-3 '>
+                <div className='w-full  md:w-[45%] mt-0 md:mt-[-10px] lg:mt-3  '>
                     <div className='mb-3 lg:mb-10'>
                         <h2 className='text-[#00000014] text-[36px] lg:text-[58px] mb-[-20px] lg:mb-[-45px]  font-semibold'>Compare</h2>
                         <h2 className='text-[#0066FF] text-[26px] lg:text-[35px]  font-semibold'>Usage Rates</h2>
@@ -62,7 +62,7 @@ const CompairImage = () => {
 }
 const ProgressBar = ({ label, percentage, sectionView }) => {
     return (
-        <div className="mb- font-sans">
+        <div className=" font-sans">
             <div className="text-[17px] font-600 mb-1">{label}</div>
             <div className="h-6 relative w-full bg-gray-200 rounded">
                 <motion.div
