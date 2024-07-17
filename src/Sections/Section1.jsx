@@ -23,16 +23,12 @@ function Section1() {
       <div className="container">
 
 
-        {/* <div className="collar-card-container">
-          <h2 className="h1-collar">collarcard</h2>
-          <h2 className="h2-collar">CollarCard</h2>
-        </div> */}
         <Heading  subTitle={"collarcard"} title={"CollarCard"} />
 
 
 
         <div className="collar-card-p">
-          <p className="text-lg">
+          <p className="text-lg text-center">
             A CollarCard is a credit card sized plastic card  that contains four
             high quality pop-out collar staysthat is stored in a man’s wallet.
           </p>

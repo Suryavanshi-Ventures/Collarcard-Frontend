@@ -141,10 +141,10 @@ const Slider = ({ testimonials }) => {
       </Swiper>
 
       {/* Custom Navigation Buttons */}
-      <div className="swiper-button-prev  text-gray-800 p-2 rounded-full absolute left-2 top-1/2 transform -translate-y-1/2 cursor-pointer z-10">
+      <div className="swiper-button-prev  text-gray-800 p-2 rounded-full absolute left-2 top-44 transform -translate-y-1/2 cursor-pointer z-10">
         <img className="w-[20px] h-[20px] " src="https://cdn-icons-png.flaticon.com/512/130/130882.png" alt="" />
       </div>
-      <div className="swiper-button-next  text-gray-800 p-2 rounded-full absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer z-10">
+      <div className="swiper-button-next  text-gray-800 p-2 rounded-full absolute right-2 top-44 transform -translate-y-1/2 cursor-pointer z-10">
         <img className="w-[20px] h-[20px]" src="https://cdn-icons-png.flaticon.com/512/130/130884.png" alt="" />
       </div>
     </div>
