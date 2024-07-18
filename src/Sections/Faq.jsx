@@ -199,7 +199,8 @@ const RenderQuestion = ({ faqs }) => {
         >
           <div className="m-0">
             <div
-              className="flex h-full cursor-pointer items-center justify-between w-full text-left font-semibold p-4 "
+              className="flex h-full cursor-pointer items-center  justify-end  w-full text-left font-semibold p-4 "
+
               onClick={() => toggleAccordion(faq?.id)}
             // aria-expanded={expandedItems.includes(faq?.id)}
             // aria-controls={`faqs-text-${faq?.id}`}

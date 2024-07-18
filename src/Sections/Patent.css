@@ -44,6 +44,7 @@
 @media (min-width: 1200px) {
   .h1-trademark {
     font-size: 42px; 
+    text-align: center;
   }
 
   .h1-patent {
