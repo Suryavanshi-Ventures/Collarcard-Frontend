@@ -1,23 +1,6 @@
-.h1-trademark {
-  color: #0000000A;
-  font-family: "Open Sans", sans-serif;
-  font-size: 69px; 
-  font-weight: 600;
-  text-align: start;
-}
-
-.h1-patent {
-  color: #0066FF;
-  font-family: "Open Sans", sans-serif;
-  font-size: 55px; 
-  font-weight:600;
-  letter-spacing: 0.5px;
-  text-align: start;
-  margin-top: -35px;
-}
 
 @media (max-width: 767px) {
-  .h1-trademark {
+  /* .h1-trademark {
     font-size: 30px; 
     font-weight: 600;
   }
@@ -26,6 +9,10 @@
     font-size: 30px; 
     margin-top: -25px; 
     
+  } */
+
+  .right-card {
+    margin-bottom: 20px;
   }
   
 }

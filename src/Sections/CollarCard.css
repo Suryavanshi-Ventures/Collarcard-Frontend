@@ -60,7 +60,7 @@ cursor: pointer;
 }
 @media (max-width: 932px) {
     .menu-list {
-        gap: 12px;
+        gap: 10px;
         display: flex;
         flex-wrap: wrap;
         cursor: pointer;

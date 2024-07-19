@@ -212,7 +212,7 @@ function Client() {
       </div> */}
 
 <div className="flex justify-center items-center mt-5 space-x-3">
-  <ul className="flex flex-wrap gap-3">
+<ul class="flex flex-wrap gap-0 md:gap-1 lg:gap-4">
     <li className={`hover:bg-[#0066FF] font-semibold font-sans p-2 hover:text-white ${selectedCategory === "ALL" && "bg-[#0066FF] text-white"}`}>
       <button className="border-none cursor-pointer" onClick={() => handleCategoryChange("ALL")}>
         ALL

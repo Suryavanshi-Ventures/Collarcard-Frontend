@@ -20,21 +20,21 @@ function Section1() {
   return (
     <div id="home">
       <Video />
-      <div className="container">
+      <div className="container mt-[90px]">
 
 
         <Heading  subTitle={"collarcard"} title={"CollarCard"} />
 
 
 
-        <div className="collar-card-p">
+        <div className="collar-card-p ">
           <p className="text-lg text-center">
             A CollarCard is a credit card sized plastic card  that contains four
             high quality pop-out collar staysthat is stored in a man’s wallet.
           </p>
         </div>
 
-        <div className="collar-card-btn mt-8">
+        <div className="collar-card-btn mt-[30px]">
           <button onClick={scrollToContact} className="btn">Request A Quote</button>
         </div>
 

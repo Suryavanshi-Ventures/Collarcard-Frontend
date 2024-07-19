@@ -14,9 +14,9 @@ function Patent() {
       
 
 
-      <div className="patent-card flex flex-col md:flex-row justify-between ">
-        <div className="left-card md:w-[45%] mb-4 md:mb-0">
-          <p className="text-base md:text-lg">
+      <div className="patent-card flex flex-col md:flex-row justify-between items-center ">
+        <div className="left-card md:w-[45%]  md:mb-0">
+          <p className=" md:text-lg mb-28">
             We take our intellectual property rights seriously, and have
             not licensed the ability to make CollarCards to any other 
             company. If somebody other than us offers or produces
@@ -25,7 +25,7 @@ function Patent() {
         </div>
 
         <div className="right-card md:w-[50%]">
-          <p className="text-base md:text-lg">
+          <p className="text-base md:text-lg ">
             CollarCards are protected by the five following issued
             patents and trademarks:
           </p>
