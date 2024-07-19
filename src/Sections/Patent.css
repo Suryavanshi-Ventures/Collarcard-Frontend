@@ -18,13 +18,14 @@
 
 @media (max-width: 767px) {
   .h1-trademark {
-    font-size: 18px; 
+    font-size: 30px; 
     font-weight: 600;
   }
 
   .h1-patent {
     font-size: 30px; 
     margin-top: -25px; 
+    
   }
   
 }
@@ -37,6 +38,7 @@
   .h1-patent {
     font-size: 41px; 
     margin-top: -25px; 
+
   }
 
 }

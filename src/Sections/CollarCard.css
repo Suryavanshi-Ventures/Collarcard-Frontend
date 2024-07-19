@@ -39,7 +39,7 @@
     gap: 12px;
     padding: 0;
     margin-top: 20px;
-
+cursor: pointer;
     list-style: none;
     text-align: center;
     justify-content: center;
@@ -47,12 +47,14 @@
 
 .menu-list li {
     margin-bottom: 10px;
+cursor: pointer;
 }
 
 /* Responsive adjustments */
 @media (min-width: 768px) {
     .menu-list {
         gap: 40px;
+        cursor: pointer;
       
     }
 }
@@ -61,6 +63,7 @@
         gap: 12px;
         display: flex;
         flex-wrap: wrap;
+        cursor: pointer;
  
       
     }

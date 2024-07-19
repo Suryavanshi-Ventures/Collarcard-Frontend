@@ -146,7 +146,7 @@ function Client() {
     <div id="clients">
       <Heading subTitle={"Works"} title={"Our Client"} />
 
-      <div class="border-none gap-5 flex text-base md:text-lg justify-center items-center">
+      {/* <div class="border-none gap-5 flex text-base md:text-lg justify-center items-center mt-8">
         <ul className="flex gap-3 ">
           <li
             className={`hover:bg-[#0066FF] font-semibold font-sans p-2 hover:text-white ${
@@ -157,7 +157,7 @@ function Client() {
               className="border-none cursor-pointer"
               onClick={() => handleCategoryChange("ALL")}
             >
-              ALL
+         ALL
             </button>
           </li>
           <li
@@ -209,7 +209,39 @@ function Client() {
             </button>
           </li>
         </ul>
-      </div>
+      </div> */}
+
+<div className="flex justify-center items-center mt-5 space-x-3">
+  <ul className="flex flex-wrap gap-3">
+    <li className={`hover:bg-[#0066FF] font-semibold font-sans p-2 hover:text-white ${selectedCategory === "ALL" && "bg-[#0066FF] text-white"}`}>
+      <button className="border-none cursor-pointer" onClick={() => handleCategoryChange("ALL")}>
+        ALL
+      </button>
+    </li>
+    <li className={`hover:bg-[#0066FF] font-semibold font-sans p-2 hover:text-white ${selectedCategory === "Business" && "bg-[#0066FF] text-white"}`}>
+      <button className="border-none cursor-pointer" onClick={() => handleCategoryChange("Business")}>
+        Business
+      </button>
+    </li>
+    <li className={`hover:bg-[#0066FF] font-semibold font-sans p-2 hover:text-white ${selectedCategory === "Dry Cleaners" && "bg-[#0066FF] text-white"}`}>
+      <button className="border-none cursor-pointer" onClick={() => handleCategoryChange("Dry Cleaners")}>
+        Dry Cleaners
+      </button>
+    </li>
+    <li className={`hover:bg-[#0066FF] font-semibold font-sans p-2 hover:text-white ${selectedCategory === "Fashion" && "bg-[#0066FF] text-white"}`}>
+      <button className="border-none cursor-pointer" onClick={() => handleCategoryChange("Fashion")}>
+        Fashion
+      </button>
+    </li>
+    <li className={`hover:bg-[#0066FF] font-semibold font-sans p-2 hover:text-white ${selectedCategory === "Hotel" && "bg-[#0066FF] text-white"}`}>
+      <button className="border-none cursor-pointer" onClick={() => handleCategoryChange("Hotel")}>
+        Hotel
+      </button>
+    </li>
+  </ul>
+</div>
+
+
       <SectionTracker
         className="hidden"
         sectionId="client1"
@@ -219,12 +251,13 @@ function Client() {
         sectionId="client"
         onInViewChange={handleInViewChange}
       />
-      <div className="client-img-container  about-container mt-10 overflow-hidden justify-start">
-        <AnimatePresence>
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 mt-10 overflow-hidden justify-start">
+  
+          <AnimatePresence>
           {filteredClients.slice(0, 12).map((itm, index) => {
             const direction = getRandomDirection(selectedCategory);
             return (
-              <motion.div
+              <motion.div 
                 key={`${itm.src}-${selectedCategory}-${index}`}
                 initial={{ scale: 0 }}
                 animate={isSectionInView && { scale: 1 }}

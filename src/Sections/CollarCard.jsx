@@ -19,7 +19,7 @@ function CollarCard() {
         </ul>
       </div>
 
-      <ul className="menu-list cursor-pointer">
+      <ul className="menu-list">
         <li className='p-2 border-b-[1.6px] border-transparent hover:border-black'>
           <Link to="home" smooth={true} duration={600}>Home</Link>
         </li>
