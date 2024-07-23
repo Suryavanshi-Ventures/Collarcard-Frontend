@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./FAQComponent.css";
+// import "./FAQComponent.css";
 import { motion } from "framer-motion";
 import Heading from "../component/Heading/Heading";
 
@@ -197,7 +197,7 @@ const RenderQuestion = ({ faqs }) => {
           key={faq?.id}
           className={`border border-gray-300 transition-all duration-300  ease-in-out`}
         >
-          <div className="m-0">
+          <div className="">
             <div
               className="flex h-full cursor-pointer items-center  justify-between  w-full text-left font-semibold p-4 "
 
@@ -248,3 +248,4 @@ const RenderQuestion = ({ faqs }) => {
     </div>
   );
 };
+

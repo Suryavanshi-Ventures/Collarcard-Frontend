@@ -123,7 +123,7 @@ const Slider = ({ testimonials }) => {
           <div className="testimonial-text-container relative bg-white text-[#4a4a4a;] p-[10px] rounded-[10px] before:absolute before:-bottom-3 before:left-5 before:border-t-[15px] before:border-t-white before:border-x-[10px] before:border-x-transparent md:text-[18px] lg:text-[18px]">
   <p>{data.text}</p>
 </div>
-<div className="testimonial-info-container mt-4 text-white">
+<div className="w-full mt-4 text-white">
   <p className="font-bold text-sm md:text-base lg:text-lg">{data.name}</p>
   <p className="text-sm md:text-base lg:text-lg">{data.position}</p>
 </div>
