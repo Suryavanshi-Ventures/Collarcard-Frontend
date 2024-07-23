@@ -47,15 +47,15 @@ function Testimonial() {
   return (
     <>
 
- 
+
       <div className="App mt-10 h-[846.5px] overflow-hidden">
         <div className="relative h-full  w-full">
           <div className="absolute w-[104%] h-[80%] bg-gray-100 transform -rotate-2  bottom-[50px] -left-2 flex justify-center items-center">
             <div className='about-container w-full h-[80%] rotate-[1.9deg]'>
               <div className=' h-[90%]'>
-                
 
-                <Heading subTitle={"What Client Say"} title ={"Testimonials"}/>
+
+                <Heading subTitle={"What Client Say"} title={"Testimonials"} />
 
                 <Slider testimonials={testimonials} />
               </div>
@@ -63,8 +63,8 @@ function Testimonial() {
           </div>
         </div>
       </div>
-    
-   
+
+
     </>
   );
 }
@@ -120,13 +120,13 @@ const Slider = ({ testimonials }) => {
             className="flex rounded-[10px] p-[10px] lg:p-[20px] justify-between bg-[#0066FF] flex-col mb-[15px] border border-[#0066FF] h-[85%]"
             key={index}
           >
-          <div className="testimonial-text-container relative bg-white text-[#4a4a4a;] p-[10px] rounded-[10px] before:absolute before:-bottom-3 before:left-5 before:border-t-[15px] before:border-t-white before:border-x-[10px] before:border-x-transparent md:text-[18px] lg:text-[18px]">
-  <p>{data.text}</p>
-</div>
-<div className="testimonial-info-container mt-4 text-white">
-  <p className="font-bold text-sm md:text-base lg:text-lg">{data.name}</p>
-  <p className="text-sm md:text-base lg:text-lg">{data.position}</p>
-</div>
+            <div className="testimonial-text-container relative bg-white text-[#4a4a4a;] p-[10px] rounded-[10px] before:absolute before:-bottom-3 before:left-5 before:border-t-[15px] before:border-t-white before:border-x-[10px] before:border-x-transparent md:text-[18px] lg:text-[18px]">
+              <p>{data.text}</p>
+            </div>
+            <div className="testimonial-info-container mt-4 text-white">
+              <p className="font-bold text-sm md:text-base lg:text-lg">{data.name}</p>
+              <p className="text-sm md:text-base lg:text-lg">{data.position}</p>
+            </div>
 
 
 
