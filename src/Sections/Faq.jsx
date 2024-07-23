@@ -159,12 +159,12 @@ const FAQComponent = () => {
 
 
 
-      <div className="flex flex-col lg:flex-row justify-between mt-5">
-        <div className="w-full lg:w-[49%]">
+      <div className="flex flex-col items-start px-2 lg:px-0 lg:flex-row justify-between mt-5">
+        <div className="w-full h-full lg:w-[49%] ">
           <RenderQuestion faqs={questionsLeft} />
           {/* {renderQuestions(questionsLeft, "left")} */}
         </div>
-        <div className="w-full lg:w-[49%]">
+        <div className="w-full h-auto lg:w-[49%]">
           <RenderQuestion faqs={questionsRight} />
         </div>
       </div>
