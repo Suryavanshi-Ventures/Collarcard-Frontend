@@ -71,11 +71,11 @@ const FAQComponent = () => {
       answer:
         "While most collar stays are manufactured overseas, we believe in American-made goods and all CollarCards are proudly made in the United States.",
     },
-    {
-      id: 10,
-      question: "What kind of plastic is used to make CollarCards?",
-      answer: "The plastic used in CollarCards is...",
-    },
+    // {
+    //   id: 10,
+    //   question: "What kind of plastic is used to make CollarCards?",
+    //   answer: "The plastic used in CollarCards is...",
+    // },
   ];
 
   const questionsRight = [

@@ -61,8 +61,8 @@ function Navbar() {
             className="absolute top-[70px] z-[999] w-full bg-[#0066FF] flex flex-col lg:hidden overflow-hidden"
           >
             {["home", "about", "clients", "patents", "faq", "contact"].map((section) => (
-              <div key={section} className="text-[16px] text-white text-center bg-white bg-opacity-15 font-[600] hover:bg-white hover:bg-opacity-15">
-                <div className="p-[10px]">
+              <div key={section} className={`text-[16px] w-full text-white text-center ${section == "home" && "bg-white bg-opacity-15"}   font-[600] hover:bg-white hover:bg-opacity-15`}>
+                <div className="p-[10px] w-full">
                   <Link
                     to={section}
                     smooth={true}
